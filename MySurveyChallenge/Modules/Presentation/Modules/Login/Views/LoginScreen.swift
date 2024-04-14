@@ -187,5 +187,5 @@ struct LoginScreen: View {
 }
 
 #Preview {
-    LoginScreen(viewModel: LoginViewModel())
+    LoginScreen(viewModel: DI.instance.resolve(LoginViewModel.self)!)
 }

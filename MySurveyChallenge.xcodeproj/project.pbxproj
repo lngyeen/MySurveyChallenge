@@ -39,6 +39,8 @@
 		F87F19F92BCB93EC003A2CA6 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19F82BCB93EC003A2CA6 /* String+.swift */; };
 		F87F1A012BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */; };
 		F87F1A052BCB9C20003A2CA6 /* HTTPRequestStubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */; };
+		F89B878C2BCC92CE005DADF3 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B878B2BCC92CE005DADF3 /* DI.swift */; };
+		F89B878F2BCC93A5005DADF3 /* LoginDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B878E2BCC93A5005DADF3 /* LoginDI.swift */; };
 		F8A2FE932BCC30D6003AA6BE /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,8 @@
 		F87F19F82BCB93EC003A2CA6 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONAPIClientSpec.swift; sourceTree = "<group>"; };
 		F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestStubber.swift; sourceTree = "<group>"; };
+		F89B878B2BCC92CE005DADF3 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+		F89B878E2BCC93A5005DADF3 /* LoginDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDI.swift; sourceTree = "<group>"; };
 		F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +182,7 @@
 		F86EDCF72BCBDF4B004E98C6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F89B878D2BCC9398005DADF3 /* DI */,
 				F86EDCF92BCBDF81004E98C6 /* ViewModifiers */,
 				F86EDCF82BCBDF6C004E98C6 /* Views */,
 				F86EDCFC2BCBE0D3004E98C6 /* ViewModels */,
@@ -319,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F19892BCB6B01003A2CA6 /* Config.swift */,
+				F89B878B2BCC92CE005DADF3 /* DI.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -520,6 +526,14 @@
 				F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		F89B878D2BCC9398005DADF3 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F89B878E2BCC93A5005DADF3 /* LoginDI.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -803,7 +817,9 @@
 			files = (
 				F86EDCFB2BCBDFBA004E98C6 /* LoginScreen.swift in Sources */,
 				F87F19EB2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift in Sources */,
+				F89B878C2BCC92CE005DADF3 /* DI.swift in Sources */,
 				F87F19DF2BCB8E69003A2CA6 /* RequestEndpoint.swift in Sources */,
+				F89B878F2BCC93A5005DADF3 /* LoginDI.swift in Sources */,
 				F87F19DB2BCB8967003A2CA6 /* NetworkAPIClient.swift in Sources */,
 				F87F19E22BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift in Sources */,
 				F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */,
