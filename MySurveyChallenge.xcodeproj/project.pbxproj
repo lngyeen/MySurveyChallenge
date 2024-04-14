@@ -14,9 +14,10 @@
 		F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F195B2BCB559C003A2CA6 /* ContentView.swift */; };
 		F87F195E2BCB559E003A2CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F195D2BCB559E003A2CA6 /* Assets.xcassets */; };
 		F87F19612BCB559E003A2CA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F19602BCB559E003A2CA6 /* Preview Assets.xcassets */; };
-		F87F196B2BCB559E003A2CA6 /* MySurveyChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F196A2BCB559E003A2CA6 /* MySurveyChallengeTests.swift */; };
 		F87F19752BCB559E003A2CA6 /* MySurveyChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19742BCB559E003A2CA6 /* MySurveyChallengeUITests.swift */; };
 		F87F19772BCB559E003A2CA6 /* MySurveyChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19762BCB559E003A2CA6 /* MySurveyChallengeUITestsLaunchTests.swift */; };
+		F87F198A2BCB6B01003A2CA6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19892BCB6B01003A2CA6 /* Config.swift */; };
+		F87F19C72BCB7566003A2CA6 /* ConfigSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19C62BCB7566003A2CA6 /* ConfigSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +53,14 @@
 		F87F195D2BCB559E003A2CA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F87F19602BCB559E003A2CA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F87F19662BCB559E003A2CA6 /* MySurveyChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySurveyChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F87F196A2BCB559E003A2CA6 /* MySurveyChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySurveyChallengeTests.swift; sourceTree = "<group>"; };
 		F87F19702BCB559E003A2CA6 /* MySurveyChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySurveyChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F19742BCB559E003A2CA6 /* MySurveyChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySurveyChallengeUITests.swift; sourceTree = "<group>"; };
 		F87F19762BCB559E003A2CA6 /* MySurveyChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySurveyChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F87F19832BCB6669003A2CA6 /* MySurveyChallenge.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MySurveyChallenge.xctestplan; sourceTree = "<group>"; };
+		F87F19852BCB69C2003A2CA6 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		F87F19862BCB6A1D003A2CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F87F19892BCB6B01003A2CA6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F87F19C62BCB7566003A2CA6 /* ConfigSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 		F87F19582BCB559C003A2CA6 /* MySurveyChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F87F19842BCB699D003A2CA6 /* Configurations */,
+				F87F19872BCB6AE4003A2CA6 /* Modules */,
 				F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */,
 				F87F195B2BCB559C003A2CA6 /* ContentView.swift */,
 				F87F195D2BCB559E003A2CA6 /* Assets.xcassets */,
@@ -155,7 +161,7 @@
 		F87F19692BCB559E003A2CA6 /* MySurveyChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F87F196A2BCB559E003A2CA6 /* MySurveyChallengeTests.swift */,
+				F87F19C32BCB752F003A2CA6 /* Modules */,
 			);
 			path = MySurveyChallengeTests;
 			sourceTree = "<group>";
@@ -167,6 +173,55 @@
 				F87F19762BCB559E003A2CA6 /* MySurveyChallengeUITestsLaunchTests.swift */,
 			);
 			path = MySurveyChallengeUITests;
+			sourceTree = "<group>";
+		};
+		F87F19842BCB699D003A2CA6 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19862BCB6A1D003A2CA6 /* Info.plist */,
+				F87F19852BCB69C2003A2CA6 /* Production.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		F87F19872BCB6AE4003A2CA6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19882BCB6AF2003A2CA6 /* Shared */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F87F19882BCB6AF2003A2CA6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19892BCB6B01003A2CA6 /* Config.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F87F19C32BCB752F003A2CA6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19C42BCB7556003A2CA6 /* Shared */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F87F19C42BCB7556003A2CA6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19C52BCB755A003A2CA6 /* Specs */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F87F19C52BCB755A003A2CA6 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19C62BCB7566003A2CA6 /* ConfigSpec.swift */,
+			);
+			path = Specs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +482,7 @@
 			files = (
 				F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */,
 				F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */,
+				F87F198A2BCB6B01003A2CA6 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87F196B2BCB559E003A2CA6 /* MySurveyChallengeTests.swift in Sources */,
+				F87F19C72BCB7566003A2CA6 /* ConfigSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +521,7 @@
 /* Begin XCBuildConfiguration section */
 		F87F19782BCB559E003A2CA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87F19852BCB69C2003A2CA6 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -528,6 +585,7 @@
 		};
 		F87F19792BCB559E003A2CA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87F19852BCB69C2003A2CA6 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -594,6 +652,7 @@
 				DEVELOPMENT_TEAM = 6P62CCW5K5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySurveyChallenge/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -628,6 +687,7 @@
 				DEVELOPMENT_TEAM = 6P62CCW5K5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySurveyChallenge/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

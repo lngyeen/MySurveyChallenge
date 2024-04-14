@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Config</key>
+	<dict>
+		<key>ClientId</key>
+		<string>$(CLIENT_ID)</string>
+		<key>ClientSecret</key>
+		<string>$(CLIENT_SECRET)</string>
+		<key>Host</key>
+		<string>$(HOST)</string>
+		<key>Scheme</key>
+		<string>$(SCHEME)</string>
+	</dict>
+</dict>
+</plist>
