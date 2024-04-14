@@ -10,6 +10,11 @@
 		4B43AF72562EDCFB25EE9F57 /* Pods_MySurveyChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */; };
 		7AEE53369D4DA94C5E36BA1E /* Pods_MySurveyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D210FBCDF4BB5CFC962656E1 /* Pods_MySurveyChallenge.framework */; };
 		E535931C1EA92C827AA11AF9 /* Pods_MySurveyChallenge_MySurveyChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8572ACF8CB435BCBE47E38 /* Pods_MySurveyChallenge_MySurveyChallengeUITests.framework */; };
+		F86EDCFB2BCBDFBA004E98C6 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EDCFA2BCBDFBA004E98C6 /* LoginScreen.swift */; };
+		F86EDCFE2BCBE0F5004E98C6 /* InputFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EDCFD2BCBE0F5004E98C6 /* InputFieldModifier.swift */; };
+		F86EDD002BCBE117004E98C6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EDCFF2BCBE117004E98C6 /* LoginViewModel.swift */; };
+		F86EDD032BCBE171004E98C6 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EDD022BCBE171004E98C6 /* View+.swift */; };
+		F86EDD072BCBE6AA004E98C6 /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EDD062BCBE6AA004E98C6 /* LoginViewModelSpec.swift */; };
 		F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */; };
 		F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F195B2BCB559C003A2CA6 /* ContentView.swift */; };
 		F87F195E2BCB559E003A2CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F195D2BCB559E003A2CA6 /* Assets.xcassets */; };
@@ -34,6 +39,7 @@
 		F87F19F92BCB93EC003A2CA6 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19F82BCB93EC003A2CA6 /* String+.swift */; };
 		F87F1A012BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */; };
 		F87F1A052BCB9C20003A2CA6 /* HTTPRequestStubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */; };
+		F8A2FE932BCC30D6003AA6BE /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,11 @@
 		A5D759E830BF01829BEAEC66 /* Pods-MySurveyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		D210FBCDF4BB5CFC962656E1 /* Pods_MySurveyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySurveyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySurveyChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86EDCFA2BCBDFBA004E98C6 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		F86EDCFD2BCBE0F5004E98C6 /* InputFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldModifier.swift; sourceTree = "<group>"; };
+		F86EDCFF2BCBE117004E98C6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F86EDD022BCBE171004E98C6 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		F86EDD062BCBE6AA004E98C6 /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
 		F87F19562BCB559C003A2CA6 /* MySurveyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySurveyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySurveyChallengeApp.swift; sourceTree = "<group>"; };
 		F87F195B2BCB559C003A2CA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +104,7 @@
 		F87F19F82BCB93EC003A2CA6 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONAPIClientSpec.swift; sourceTree = "<group>"; };
 		F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestStubber.swift; sourceTree = "<group>"; };
+		F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +156,82 @@
 				E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F86EDCF52BCBDF22004E98C6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDD012BCBE162004E98C6 /* Utils */,
+				F86EDCF62BCBDF38004E98C6 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F86EDCF62BCBDF38004E98C6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDCF72BCBDF4B004E98C6 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F86EDCF72BCBDF4B004E98C6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDCF92BCBDF81004E98C6 /* ViewModifiers */,
+				F86EDCF82BCBDF6C004E98C6 /* Views */,
+				F86EDCFC2BCBE0D3004E98C6 /* ViewModels */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F86EDCF82BCBDF6C004E98C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDCFA2BCBDFBA004E98C6 /* LoginScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F86EDCF92BCBDF81004E98C6 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDCFD2BCBE0F5004E98C6 /* InputFieldModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		F86EDCFC2BCBE0D3004E98C6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDCFF2BCBE117004E98C6 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F86EDD012BCBE162004E98C6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDD022BCBE171004E98C6 /* View+.swift */,
+				F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F86EDD042BCBE682004E98C6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDD052BCBE694004E98C6 /* Specs */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F86EDD052BCBE694004E98C6 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				F86EDD062BCBE6AA004E98C6 /* LoginViewModelSpec.swift */,
+			);
+			path = Specs;
 			sourceTree = "<group>";
 		};
 		F87F194D2BCB559C003A2CA6 = {
@@ -221,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F19882BCB6AF2003A2CA6 /* Shared */,
+				F86EDCF52BCBDF22004E98C6 /* Presentation */,
 				F87F19D72BCB8412003A2CA6 /* Data */,
 			);
 			path = Modules;
@@ -238,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F19C42BCB7556003A2CA6 /* Shared */,
+				F86EDD042BCBE682004E98C6 /* Presentation */,
 				F87F19EE2BCB91E6003A2CA6 /* Data */,
 			);
 			path = Modules;
@@ -711,6 +801,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86EDCFB2BCBDFBA004E98C6 /* LoginScreen.swift in Sources */,
 				F87F19EB2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift in Sources */,
 				F87F19DF2BCB8E69003A2CA6 /* RequestEndpoint.swift in Sources */,
 				F87F19DB2BCB8967003A2CA6 /* NetworkAPIClient.swift in Sources */,
@@ -718,10 +809,14 @@
 				F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */,
 				F87F19ED2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift in Sources */,
 				F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */,
+				F86EDD002BCBE117004E98C6 /* LoginViewModel.swift in Sources */,
 				F87F198A2BCB6B01003A2CA6 /* Config.swift in Sources */,
 				F87F19DD2BCB8988003A2CA6 /* NetworkAPIError.swift in Sources */,
+				F8A2FE932BCC30D6003AA6BE /* UIWindow+.swift in Sources */,
 				F87F19D42BCB7B53003A2CA6 /* R.generated.swift in Sources */,
+				F86EDD032BCBE171004E98C6 /* View+.swift in Sources */,
 				F87F19E42BCB9026003A2CA6 /* JapxResponse.swift in Sources */,
+				F86EDCFE2BCBE0F5004E98C6 /* InputFieldModifier.swift in Sources */,
 				F87F19E72BCB90B2003A2CA6 /* NetworkAPIClientFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,6 +829,7 @@
 				F87F19C72BCB7566003A2CA6 /* ConfigSpec.swift in Sources */,
 				F87F19F92BCB93EC003A2CA6 /* String+.swift in Sources */,
 				F87F1A052BCB9C20003A2CA6 /* HTTPRequestStubber.swift in Sources */,
+				F86EDD072BCBE6AA004E98C6 /* LoginViewModelSpec.swift in Sources */,
 				F87F1A012BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift in Sources */,
 				F87F19F42BCB9338003A2CA6 /* DummyJSONAPIDTO.swift in Sources */,
 			);

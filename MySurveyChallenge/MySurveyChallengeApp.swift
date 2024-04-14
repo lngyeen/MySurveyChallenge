@@ -11,7 +11,7 @@ import SwiftUI
 struct MySurveyChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginScreen(viewModel: LoginViewModel())
         }
     }
 }
