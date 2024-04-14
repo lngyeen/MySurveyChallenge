@@ -18,6 +18,11 @@
 		F87F19772BCB559E003A2CA6 /* MySurveyChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19762BCB559E003A2CA6 /* MySurveyChallengeUITestsLaunchTests.swift */; };
 		F87F198A2BCB6B01003A2CA6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19892BCB6B01003A2CA6 /* Config.swift */; };
 		F87F19C72BCB7566003A2CA6 /* ConfigSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19C62BCB7566003A2CA6 /* ConfigSpec.swift */; };
+		F87F19CB2BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = F87F19C92BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf */; };
+		F87F19CC2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F87F19CA2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf */; };
+		F87F19CD2BCB792D003A2CA6 /* NeuzeitSLTStd-Book.otf in Sources */ = {isa = PBXBuildFile; fileRef = F87F19C92BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf */; };
+		F87F19CE2BCB792D003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf in Sources */ = {isa = PBXBuildFile; fileRef = F87F19CA2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf */; };
+		F87F19D42BCB7B53003A2CA6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19D32BCB7B53003A2CA6 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,9 @@
 		F87F19862BCB6A1D003A2CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F87F19892BCB6B01003A2CA6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F87F19C62BCB7566003A2CA6 /* ConfigSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSpec.swift; sourceTree = "<group>"; };
+		F87F19C92BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitSLTStd-Book.otf"; sourceTree = "<group>"; };
+		F87F19CA2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitSLTStd-BookHeavy.otf"; sourceTree = "<group>"; };
+		F87F19D32BCB7B53003A2CA6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F19832BCB6669003A2CA6 /* MySurveyChallenge.xctestplan */,
+				F87F19D12BCB7B53003A2CA6 /* Generated */,
 				F87F19582BCB559C003A2CA6 /* MySurveyChallenge */,
 				F87F19692BCB559E003A2CA6 /* MySurveyChallengeTests */,
 				F87F19732BCB559E003A2CA6 /* MySurveyChallengeUITests */,
@@ -140,11 +149,11 @@
 		F87F19582BCB559C003A2CA6 /* MySurveyChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F87F19C82BCB78FE003A2CA6 /* Resources */,
 				F87F19842BCB699D003A2CA6 /* Configurations */,
 				F87F19872BCB6AE4003A2CA6 /* Modules */,
 				F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */,
 				F87F195B2BCB559C003A2CA6 /* ContentView.swift */,
-				F87F195D2BCB559E003A2CA6 /* Assets.xcassets */,
 				F87F195F2BCB559E003A2CA6 /* Preview Content */,
 			);
 			path = MySurveyChallenge;
@@ -224,6 +233,32 @@
 			path = Specs;
 			sourceTree = "<group>";
 		};
+		F87F19C82BCB78FE003A2CA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19C92BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf */,
+				F87F19CA2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf */,
+				F87F195D2BCB559E003A2CA6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F87F19D12BCB7B53003A2CA6 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19D22BCB7B53003A2CA6 /* Rswift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		F87F19D22BCB7B53003A2CA6 /* Rswift */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19D32BCB7B53003A2CA6 /* R.generated.swift */,
+			);
+			path = Rswift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,6 +267,7 @@
 			buildConfigurationList = F87F197A2BCB559E003A2CA6 /* Build configuration list for PBXNativeTarget "MySurveyChallenge" */;
 			buildPhases = (
 				DBA5CD54AD3477DA690A546C /* [CP] Check Pods Manifest.lock */,
+				F87F19CF2BCB7968003A2CA6 /* R.swift */,
 				F87F19522BCB559C003A2CA6 /* Sources */,
 				F87F19532BCB559C003A2CA6 /* Frameworks */,
 				F87F19542BCB559C003A2CA6 /* Resources */,
@@ -334,6 +370,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87F19CB2BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf in Resources */,
+				F87F19CC2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf in Resources */,
 				F87F19612BCB559E003A2CA6 /* Preview Assets.xcassets in Resources */,
 				F87F195E2BCB559E003A2CA6 /* Assets.xcassets in Resources */,
 			);
@@ -451,6 +489,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F87F19CF2BCB7968003A2CA6 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Generated/Rswift/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Generated/Rswift/R.generated.swift\"\n";
+		};
 		FA47A2A5F2DE1F6454EE75BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,9 +538,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87F19CD2BCB792D003A2CA6 /* NeuzeitSLTStd-Book.otf in Sources */,
+				F87F19CE2BCB792D003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf in Sources */,
 				F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */,
 				F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */,
 				F87F198A2BCB6B01003A2CA6 /* Config.swift in Sources */,
+				F87F19D42BCB7B53003A2CA6 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,8 +717,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,8 +751,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
