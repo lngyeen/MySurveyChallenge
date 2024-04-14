@@ -9,6 +9,12 @@ PODS:
     - CwlCatchException (~> 2.2.0)
     - CwlMachBadInstructionHandler (~> 2.2.0)
     - CwlPosixPreconditionTesting (~> 2.2.0)
+  - Japx (4.0.0):
+    - Japx/Core (= 4.0.0)
+  - Japx/Alamofire (4.0.0):
+    - Alamofire
+    - Japx/Core
+  - Japx/Core (4.0.0)
   - Nimble (13.2.1):
     - CwlPreconditionTesting (~> 2.2.0)
   - OHHTTPStubs/Core (9.1.0)
@@ -29,6 +35,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Japx
+  - Japx/Alamofire
   - Nimble
   - OHHTTPStubs/Swift
   - Quick
@@ -42,6 +50,7 @@ SPEC REPOS:
     - CwlMachBadInstructionHandler
     - CwlPosixPreconditionTesting
     - CwlPreconditionTesting
+    - Japx
     - Nimble
     - OHHTTPStubs
     - Quick
@@ -54,11 +63,12 @@ SPEC CHECKSUMS:
   CwlMachBadInstructionHandler: ea1030428925d9bf340882522af30712fb4bf356
   CwlPosixPreconditionTesting: a125dee731883f2582715f548c6b6c92c7fde145
   CwlPreconditionTesting: ccfd08aca58d14e04062b2a3dd2fd52e09857453
+  Japx: 4bb2d79d023af5e7ea44c0a2875c4b070080e111
   Nimble: 9e81a67096dab1d1f5160d7a3f8fa7a1eeec38fd
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
 
-PODFILE CHECKSUM: fd3723ffea5db55654d2648892bbca2b27eec37c
+PODFILE CHECKSUM: cf0493d58bdf25c49cc0b5b69699948b63ea4428
 
 COCOAPODS: 1.15.2

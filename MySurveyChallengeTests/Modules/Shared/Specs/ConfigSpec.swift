@@ -13,9 +13,9 @@ import Quick
 
 final class ConfigSpec: QuickSpec {
     override class func spec() {
-        var sut: Config!
-        
         describe("Config") {
+            var sut: Config!
+            
             context("when accessing properties") {
                 beforeEach {
                     sut = Config.current

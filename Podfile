@@ -13,6 +13,8 @@ target 'MySurveyChallenge' do
 
   # Pods for MySurveyChallenge
   pod 'Alamofire'
+  pod 'Japx'
+  pod 'Japx/Alamofire'
   pod 'R.swift'
 
   target 'MySurveyChallengeTests' do
