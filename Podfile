@@ -13,6 +13,7 @@ target 'MySurveyChallenge' do
 
   # Pods for MySurveyChallenge
   pod 'Alamofire'
+  pod 'R.swift'
 
   target 'MySurveyChallengeTests' do
     inherit! :search_paths

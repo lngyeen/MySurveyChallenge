@@ -25,12 +25,14 @@ PODS:
   - OHHTTPStubs/Swift (9.1.0):
     - OHHTTPStubs/Default
   - Quick (7.5.0)
+  - R.swift (7.3.2)
 
 DEPENDENCIES:
   - Alamofire
   - Nimble
   - OHHTTPStubs/Swift
   - Quick
+  - R.swift
 
 SPEC REPOS:
   trunk:
@@ -43,6 +45,7 @@ SPEC REPOS:
     - Nimble
     - OHHTTPStubs
     - Quick
+    - R.swift
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
@@ -54,7 +57,8 @@ SPEC CHECKSUMS:
   Nimble: 9e81a67096dab1d1f5160d7a3f8fa7a1eeec38fd
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
 
-PODFILE CHECKSUM: d304ee05e076aad3155bb9cc2e1cbb07057050ed
+PODFILE CHECKSUM: fd3723ffea5db55654d2648892bbca2b27eec37c
 
 COCOAPODS: 1.15.2
