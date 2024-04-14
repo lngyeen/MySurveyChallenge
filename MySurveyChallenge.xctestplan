@@ -24,6 +24,7 @@
       }
     },
     {
+      "enabled" : false,
       "target" : {
         "containerPath" : "container:MySurveyChallenge.xcodeproj",
         "identifier" : "F87F196F2BCB559E003A2CA6",
