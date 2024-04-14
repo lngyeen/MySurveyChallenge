@@ -20,9 +20,20 @@
 		F87F19C72BCB7566003A2CA6 /* ConfigSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19C62BCB7566003A2CA6 /* ConfigSpec.swift */; };
 		F87F19CB2BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = F87F19C92BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf */; };
 		F87F19CC2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F87F19CA2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf */; };
-		F87F19CD2BCB792D003A2CA6 /* NeuzeitSLTStd-Book.otf in Sources */ = {isa = PBXBuildFile; fileRef = F87F19C92BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf */; };
-		F87F19CE2BCB792D003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf in Sources */ = {isa = PBXBuildFile; fileRef = F87F19CA2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf */; };
 		F87F19D42BCB7B53003A2CA6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19D32BCB7B53003A2CA6 /* R.generated.swift */; };
+		F87F19DB2BCB8967003A2CA6 /* NetworkAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19DA2BCB8967003A2CA6 /* NetworkAPIClient.swift */; };
+		F87F19DD2BCB8988003A2CA6 /* NetworkAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19DC2BCB8988003A2CA6 /* NetworkAPIError.swift */; };
+		F87F19DF2BCB8E69003A2CA6 /* RequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19DE2BCB8E69003A2CA6 /* RequestEndpoint.swift */; };
+		F87F19E22BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19E12BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift */; };
+		F87F19E42BCB9026003A2CA6 /* JapxResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19E32BCB9026003A2CA6 /* JapxResponse.swift */; };
+		F87F19E72BCB90B2003A2CA6 /* NetworkAPIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19E62BCB90B2003A2CA6 /* NetworkAPIClientFactory.swift */; };
+		F87F19EB2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19EA2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift */; };
+		F87F19ED2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19EC2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift */; };
+		F87F19F42BCB9338003A2CA6 /* DummyJSONAPIDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19F32BCB9338003A2CA6 /* DummyJSONAPIDTO.swift */; };
+		F87F19F62BCB9359003A2CA6 /* DummyRequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19F52BCB9359003A2CA6 /* DummyRequestEndpoint.swift */; };
+		F87F19F92BCB93EC003A2CA6 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19F82BCB93EC003A2CA6 /* String+.swift */; };
+		F87F1A012BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */; };
+		F87F1A052BCB9C20003A2CA6 /* HTTPRequestStubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +80,19 @@
 		F87F19C92BCB7918003A2CA6 /* NeuzeitSLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitSLTStd-Book.otf"; sourceTree = "<group>"; };
 		F87F19CA2BCB7918003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitSLTStd-BookHeavy.otf"; sourceTree = "<group>"; };
 		F87F19D32BCB7B53003A2CA6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		F87F19DA2BCB8967003A2CA6 /* NetworkAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIClient.swift; sourceTree = "<group>"; };
+		F87F19DC2BCB8988003A2CA6 /* NetworkAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIError.swift; sourceTree = "<group>"; };
+		F87F19DE2BCB8E69003A2CA6 /* RequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEndpoint.swift; sourceTree = "<group>"; };
+		F87F19E12BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONAPIClient.swift; sourceTree = "<group>"; };
+		F87F19E32BCB9026003A2CA6 /* JapxResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapxResponse.swift; sourceTree = "<group>"; };
+		F87F19E62BCB90B2003A2CA6 /* NetworkAPIClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIClientFactory.swift; sourceTree = "<group>"; };
+		F87F19EA2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLogEventMonitor.swift; sourceTree = "<group>"; };
+		F87F19EC2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIClientProvider.swift; sourceTree = "<group>"; };
+		F87F19F32BCB9338003A2CA6 /* DummyJSONAPIDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyJSONAPIDTO.swift; sourceTree = "<group>"; };
+		F87F19F52BCB9359003A2CA6 /* DummyRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRequestEndpoint.swift; sourceTree = "<group>"; };
+		F87F19F82BCB93EC003A2CA6 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONAPIClientSpec.swift; sourceTree = "<group>"; };
+		F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestStubber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F19882BCB6AF2003A2CA6 /* Shared */,
+				F87F19D72BCB8412003A2CA6 /* Data */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -213,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F19C42BCB7556003A2CA6 /* Shared */,
+				F87F19EE2BCB91E6003A2CA6 /* Data */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -257,6 +283,153 @@
 				F87F19D32BCB7B53003A2CA6 /* R.generated.swift */,
 			);
 			path = Rswift;
+			sourceTree = "<group>";
+		};
+		F87F19D72BCB8412003A2CA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19F72BCB93DC003A2CA6 /* Utils */,
+				F87F19D82BCB88CD003A2CA6 /* Networking */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F87F19D82BCB88CD003A2CA6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19E92BCB90FD003A2CA6 /* Intercepters */,
+				F87F19E82BCB90D0003A2CA6 /* Core */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F87F19D92BCB88E5003A2CA6 /* NetworkAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19DA2BCB8967003A2CA6 /* NetworkAPIClient.swift */,
+				F87F19DC2BCB8988003A2CA6 /* NetworkAPIError.swift */,
+				F87F19DE2BCB8E69003A2CA6 /* RequestEndpoint.swift */,
+			);
+			path = NetworkAPIClient;
+			sourceTree = "<group>";
+		};
+		F87F19E02BCB8F99003A2CA6 /* NetworkJSONAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19E12BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift */,
+				F87F19E62BCB90B2003A2CA6 /* NetworkAPIClientFactory.swift */,
+				F87F19EC2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift */,
+				F87F19E32BCB9026003A2CA6 /* JapxResponse.swift */,
+			);
+			path = NetworkJSONAPIClient;
+			sourceTree = "<group>";
+		};
+		F87F19E82BCB90D0003A2CA6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19D92BCB88E5003A2CA6 /* NetworkAPIClient */,
+				F87F19E02BCB8F99003A2CA6 /* NetworkJSONAPIClient */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F87F19E92BCB90FD003A2CA6 /* Intercepters */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19EA2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift */,
+			);
+			path = Intercepters;
+			sourceTree = "<group>";
+		};
+		F87F19EE2BCB91E6003A2CA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F87F1A032BCB9C0B003A2CA6 /* Utils */,
+				F87F19EF2BCB921F003A2CA6 /* Sources */,
+				F87F19FC2BCB9AFD003A2CA6 /* Specs */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F87F19EF2BCB921F003A2CA6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19F02BCB9230003A2CA6 /* Dummies */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F87F19F02BCB9230003A2CA6 /* Dummies */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19F12BCB931E003A2CA6 /* DTOs */,
+				F87F19F22BCB9324003A2CA6 /* RequestEndpoints */,
+			);
+			path = Dummies;
+			sourceTree = "<group>";
+		};
+		F87F19F12BCB931E003A2CA6 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19F32BCB9338003A2CA6 /* DummyJSONAPIDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		F87F19F22BCB9324003A2CA6 /* RequestEndpoints */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19F52BCB9359003A2CA6 /* DummyRequestEndpoint.swift */,
+			);
+			path = RequestEndpoints;
+			sourceTree = "<group>";
+		};
+		F87F19F72BCB93DC003A2CA6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19F82BCB93EC003A2CA6 /* String+.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F87F19FC2BCB9AFD003A2CA6 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19FD2BCB9B1D003A2CA6 /* Networking */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		F87F19FD2BCB9B1D003A2CA6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19FE2BCB9B24003A2CA6 /* Core */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F87F19FE2BCB9B24003A2CA6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F87F19FF2BCB9B2E003A2CA6 /* NetworkJSONAPIClient */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F87F19FF2BCB9B2E003A2CA6 /* NetworkJSONAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */,
+			);
+			path = NetworkJSONAPIClient;
+			sourceTree = "<group>";
+		};
+		F87F1A032BCB9C0B003A2CA6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -538,12 +711,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87F19CD2BCB792D003A2CA6 /* NeuzeitSLTStd-Book.otf in Sources */,
-				F87F19CE2BCB792D003A2CA6 /* NeuzeitSLTStd-BookHeavy.otf in Sources */,
+				F87F19EB2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift in Sources */,
+				F87F19DF2BCB8E69003A2CA6 /* RequestEndpoint.swift in Sources */,
+				F87F19DB2BCB8967003A2CA6 /* NetworkAPIClient.swift in Sources */,
+				F87F19E22BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift in Sources */,
 				F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */,
+				F87F19ED2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift in Sources */,
 				F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */,
 				F87F198A2BCB6B01003A2CA6 /* Config.swift in Sources */,
+				F87F19DD2BCB8988003A2CA6 /* NetworkAPIError.swift in Sources */,
 				F87F19D42BCB7B53003A2CA6 /* R.generated.swift in Sources */,
+				F87F19E42BCB9026003A2CA6 /* JapxResponse.swift in Sources */,
+				F87F19E72BCB90B2003A2CA6 /* NetworkAPIClientFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +730,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87F19F62BCB9359003A2CA6 /* DummyRequestEndpoint.swift in Sources */,
 				F87F19C72BCB7566003A2CA6 /* ConfigSpec.swift in Sources */,
+				F87F19F92BCB93EC003A2CA6 /* String+.swift in Sources */,
+				F87F1A052BCB9C20003A2CA6 /* HTTPRequestStubber.swift in Sources */,
+				F87F1A012BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift in Sources */,
+				F87F19F42BCB9338003A2CA6 /* DummyJSONAPIDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
