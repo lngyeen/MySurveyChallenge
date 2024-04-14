@@ -32,6 +32,7 @@ PODS:
     - OHHTTPStubs/Default
   - Quick (7.5.0)
   - R.swift (7.3.2)
+  - Swinject (2.8.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - OHHTTPStubs/Swift
   - Quick
   - R.swift
+  - Swinject
 
 SPEC REPOS:
   trunk:
@@ -55,6 +57,7 @@ SPEC REPOS:
     - OHHTTPStubs
     - Quick
     - R.swift
+    - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
@@ -68,7 +71,8 @@ SPEC CHECKSUMS:
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  Swinject: 6ba81f58fd769c9fd4b8ceced9e25a9cb137cb3c
 
-PODFILE CHECKSUM: cf0493d58bdf25c49cc0b5b69699948b63ea4428
+PODFILE CHECKSUM: 5039fcf004a792fbd3ffcc5ec9e085d149321fa0
 
 COCOAPODS: 1.15.2
