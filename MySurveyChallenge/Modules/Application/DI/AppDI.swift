@@ -9,8 +9,8 @@ import Foundation
 
 class AppSingletonAssembly: SingletonAssembly {
     func assemble(container: Container) {
-        container.register(AuthenticationManager.self) { _ in
-            AuthenticationManagerImpl()
+        container.register(AuthenticationManager.self) {
+            AuthenticationManagerImpl(secureStoreService: $0.resolve(SecureStoreService.self)!)
         }
     }
 }

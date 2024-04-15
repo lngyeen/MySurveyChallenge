@@ -88,6 +88,31 @@ final class LoginViewModelSpec: AsyncSpec {
                 }
             }
 
+            describe("perform checkAuthentication") {
+                context("when token is valid") {
+                    beforeEach {
+                        authenticationManager.isTokenValidBoolReturnValue = true
+                        authenticationManager.retrieveStoredTokenUserCredentialsClosure = {
+                            UserCredentials.sample
+                        }
+                    }
+
+                    it("should set loggedIn to true") {
+                        await expect { await sut.checkAuthentication() }.to(beTrue())
+                    }
+                }
+
+                context("when token is not valid") {
+                    beforeEach {
+                        authenticationManager.isTokenValidBoolReturnValue = false
+                    }
+
+                    it("should not set loggedIn to true") {
+                        await expect { await sut.checkAuthentication() }.to(beFalse())
+                    }
+                }
+            }
+
             describe("perform login") {
                 context("when login is successful") {
                     beforeEach {

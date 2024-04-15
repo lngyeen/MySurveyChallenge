@@ -15,6 +15,7 @@ PODS:
     - Alamofire
     - Japx/Core
   - Japx/Core (4.0.0)
+  - KeychainAccess (4.2.2)
   - Nimble (13.2.1):
     - CwlPreconditionTesting (~> 2.2.0)
   - OHHTTPStubs/Core (9.1.0)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - Alamofire
   - Japx
   - Japx/Alamofire
+  - KeychainAccess
   - Nimble
   - OHHTTPStubs/Swift
   - Quick
@@ -57,6 +59,7 @@ SPEC REPOS:
     - CwlPosixPreconditionTesting
     - CwlPreconditionTesting
     - Japx
+    - KeychainAccess
     - Nimble
     - OHHTTPStubs
     - Quick
@@ -72,6 +75,7 @@ SPEC CHECKSUMS:
   CwlPosixPreconditionTesting: a125dee731883f2582715f548c6b6c92c7fde145
   CwlPreconditionTesting: ccfd08aca58d14e04062b2a3dd2fd52e09857453
   Japx: 4bb2d79d023af5e7ea44c0a2875c4b070080e111
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   Nimble: 9e81a67096dab1d1f5160d7a3f8fa7a1eeec38fd
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
@@ -79,6 +83,6 @@ SPEC CHECKSUMS:
   Sourcery: 40610fe0d6edf71c7a2f984c96727fae99b94d08
   Swinject: 6ba81f58fd769c9fd4b8ceced9e25a9cb137cb3c
 
-PODFILE CHECKSUM: 8031afbd0ff5be7745e31eb68962cd00de2c92a0
+PODFILE CHECKSUM: 5dc5b8a2aa7662db31acc6769fc0b402deea73d5
 
 COCOAPODS: 1.15.2

@@ -10,6 +10,12 @@
 		4B43AF72562EDCFB25EE9F57 /* Pods_MySurveyChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */; };
 		7AEE53369D4DA94C5E36BA1E /* Pods_MySurveyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D210FBCDF4BB5CFC962656E1 /* Pods_MySurveyChallenge.framework */; };
 		E535931C1EA92C827AA11AF9 /* Pods_MySurveyChallenge_MySurveyChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8572ACF8CB435BCBE47E38 /* Pods_MySurveyChallenge_MySurveyChallengeUITests.framework */; };
+		F82B180D2BCD26D60003FE37 /* SecureStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B180C2BCD26D60003FE37 /* SecureStoreService.swift */; };
+		F82B18132BCD27A30003FE37 /* DeviceDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B18122BCD27A30003FE37 /* DeviceDI.swift */; };
+		F82B18152BCD27B20003FE37 /* KeychainStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B18142BCD27B20003FE37 /* KeychainStoreService.swift */; };
+		F82B18172BCD27D80003FE37 /* KeychainFrameworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B18162BCD27D80003FE37 /* KeychainFrameworkAdapter.swift */; };
+		F82B181D2BCD28770003FE37 /* DummyCodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B181C2BCD28770003FE37 /* DummyCodableModel.swift */; };
+		F82B181F2BCD28840003FE37 /* KeychainStoreServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B181E2BCD28840003FE37 /* KeychainStoreServiceSpec.swift */; };
 		F86EDCFB2BCBDFBA004E98C6 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EDCFA2BCBDFBA004E98C6 /* LoginScreen.swift */; };
 		F86EDCFE2BCBE0F5004E98C6 /* InputFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EDCFD2BCBE0F5004E98C6 /* InputFieldModifier.swift */; };
 		F86EDD002BCBE117004E98C6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EDCFF2BCBE117004E98C6 /* LoginViewModel.swift */; };
@@ -93,6 +99,12 @@
 		A5D759E830BF01829BEAEC66 /* Pods-MySurveyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		D210FBCDF4BB5CFC962656E1 /* Pods_MySurveyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySurveyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySurveyChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F82B180C2BCD26D60003FE37 /* SecureStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreService.swift; sourceTree = "<group>"; };
+		F82B18122BCD27A30003FE37 /* DeviceDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDI.swift; sourceTree = "<group>"; };
+		F82B18142BCD27B20003FE37 /* KeychainStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreService.swift; sourceTree = "<group>"; };
+		F82B18162BCD27D80003FE37 /* KeychainFrameworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainFrameworkAdapter.swift; sourceTree = "<group>"; };
+		F82B181C2BCD28770003FE37 /* DummyCodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCodableModel.swift; sourceTree = "<group>"; };
+		F82B181E2BCD28840003FE37 /* KeychainStoreServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreServiceSpec.swift; sourceTree = "<group>"; };
 		F86EDCFA2BCBDFBA004E98C6 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		F86EDCFD2BCBE0F5004E98C6 /* InputFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldModifier.swift; sourceTree = "<group>"; };
 		F86EDCFF2BCBE117004E98C6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -204,6 +216,81 @@
 				E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F82B180B2BCD26BB0003FE37 /* DeviceServices */ = {
+			isa = PBXGroup;
+			children = (
+				F82B180C2BCD26D60003FE37 /* SecureStoreService.swift */,
+			);
+			path = DeviceServices;
+			sourceTree = "<group>";
+		};
+		F82B180E2BCD275F0003FE37 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				F82B180F2BCD276F0003FE37 /* DI */,
+				F82B18102BCD27740003FE37 /* Services */,
+				F82B18112BCD277A0003FE37 /* FrameworkAdapters */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		F82B180F2BCD276F0003FE37 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F82B18122BCD27A30003FE37 /* DeviceDI.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F82B18102BCD27740003FE37 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F82B18142BCD27B20003FE37 /* KeychainStoreService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F82B18112BCD277A0003FE37 /* FrameworkAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				F82B18162BCD27D80003FE37 /* KeychainFrameworkAdapter.swift */,
+			);
+			path = FrameworkAdapters;
+			sourceTree = "<group>";
+		};
+		F82B18182BCD28420003FE37 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				F82B18192BCD28540003FE37 /* Sources */,
+				F82B181A2BCD28590003FE37 /* Specs */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		F82B18192BCD28540003FE37 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F82B181B2BCD28630003FE37 /* Dummies */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F82B181A2BCD28590003FE37 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				F82B181E2BCD28840003FE37 /* KeychainStoreServiceSpec.swift */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		F82B181B2BCD28630003FE37 /* Dummies */ = {
+			isa = PBXGroup;
+			children = (
+				F82B181C2BCD28770003FE37 /* DummyCodableModel.swift */,
+			);
+			path = Dummies;
 			sourceTree = "<group>";
 		};
 		F86EDCF52BCBDF22004E98C6 /* Presentation */ = {
@@ -378,6 +465,7 @@
 				F87F19882BCB6AF2003A2CA6 /* Shared */,
 				F86EDCF52BCBDF22004E98C6 /* Presentation */,
 				F89B87902BCC9693005DADF3 /* Application */,
+				F82B180E2BCD275F0003FE37 /* Device */,
 				F87F19D72BCB8412003A2CA6 /* Data */,
 			);
 			path = Modules;
@@ -398,6 +486,7 @@
 				F87F19C42BCB7556003A2CA6 /* Shared */,
 				F86EDD042BCBE682004E98C6 /* Presentation */,
 				F89B87D72BCCA6CD005DADF3 /* Application */,
+				F82B18182BCD28420003FE37 /* Device */,
 				F87F19EE2BCB91E6003A2CA6 /* Data */,
 			);
 			path = Modules;
@@ -658,6 +747,7 @@
 			isa = PBXGroup;
 			children = (
 				F89B87962BCC9707005DADF3 /* DataRepositories */,
+				F82B180B2BCD26BB0003FE37 /* DeviceServices */,
 			);
 			path = GatewayInterfaces;
 			sourceTree = "<group>";
@@ -1116,10 +1206,13 @@
 				F89B878F2BCC93A5005DADF3 /* LoginDI.swift in Sources */,
 				F89B87A82BCC9936005DADF3 /* HomeScreen.swift in Sources */,
 				F89B879A2BCC974D005DADF3 /* AppNetworkError.swift in Sources */,
+				F82B180D2BCD26D60003FE37 /* SecureStoreService.swift in Sources */,
 				F87F19DB2BCB8967003A2CA6 /* NetworkAPIClient.swift in Sources */,
 				F87F19E22BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift in Sources */,
 				F89B87A42BCC983D005DADF3 /* UserCredentials.swift in Sources */,
+				F82B18172BCD27D80003FE37 /* KeychainFrameworkAdapter.swift in Sources */,
 				F89B87C72BCCA0DD005DADF3 /* AutoGeneratedEquatables.swift in Sources */,
+				F82B18152BCD27B20003FE37 /* KeychainStoreService.swift in Sources */,
 				F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */,
 				F89B87C22BCC9D19005DADF3 /* String+.swift in Sources */,
 				F87F19ED2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift in Sources */,
@@ -1137,6 +1230,7 @@
 				F89B87C12BCC9BF0005DADF3 /* Result+.swift in Sources */,
 				F86EDD032BCBE171004E98C6 /* View+.swift in Sources */,
 				F87F19E42BCB9026003A2CA6 /* JapxResponse.swift in Sources */,
+				F82B18132BCD27A30003FE37 /* DeviceDI.swift in Sources */,
 				F89B87AF2BCC99FF005DADF3 /* LoginRepositoryImpl.swift in Sources */,
 				F89B87AC2BCC99CE005DADF3 /* DataDI.swift in Sources */,
 				F86EDCFE2BCBE0F5004E98C6 /* InputFieldModifier.swift in Sources */,
@@ -1155,11 +1249,13 @@
 				F89B87C92BCCA0EB005DADF3 /* AutoGeneratedMocks.swift in Sources */,
 				F89B87D32BCCA200005DADF3 /* AppNetworkErrorMapperSpec.swift in Sources */,
 				F87F19F62BCB9359003A2CA6 /* DummyRequestEndpoint.swift in Sources */,
+				F82B181F2BCD28840003FE37 /* KeychainStoreServiceSpec.swift in Sources */,
 				F876B8522BCCE12B00558DCF /* UserCredentialsSpec.swift in Sources */,
 				F87F19C72BCB7566003A2CA6 /* ConfigSpec.swift in Sources */,
 				F87F1A052BCB9C20003A2CA6 /* HTTPRequestStubber.swift in Sources */,
 				F89B87DE2BCCA720005DADF3 /* LoginUseCaseImplSpec.swift in Sources */,
 				F86EDD072BCBE6AA004E98C6 /* LoginViewModelSpec.swift in Sources */,
+				F82B181D2BCD28770003FE37 /* DummyCodableModel.swift in Sources */,
 				F89B87D12BCCA1F7005DADF3 /* UserCredentialsModelMapperSpec.swift in Sources */,
 				F87F1A012BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift in Sources */,
 				F87F19F42BCB9338003A2CA6 /* DummyJSONAPIDTO.swift in Sources */,

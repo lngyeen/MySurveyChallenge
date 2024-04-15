@@ -43,7 +43,7 @@ final class LoginRepositoryImplSpec: QuickSpec {
                         let configuration = AuthenticationRequestEndpoint.login(loginDto: dto)
                         HTTPRequestStubber.stub(configuration)
 
-                        waitUntil { done in
+                        waitUntil(timeout: .seconds(5)) { done in
                             sut.loginWith(email: dto.email, password: dto.password)
                                 .sink { response in
                                     switch response {
@@ -69,7 +69,7 @@ final class LoginRepositoryImplSpec: QuickSpec {
                         let configuration = AuthenticationRequestEndpoint.login(loginDto: dto)
                         HTTPRequestStubber.stubError(configuration)
 
-                        waitUntil { done in
+                        waitUntil(timeout: .seconds(5)) { done in
                             sut.loginWith(email: dto.email, password: dto.password)
                                 .sink { response in
                                     switch response {

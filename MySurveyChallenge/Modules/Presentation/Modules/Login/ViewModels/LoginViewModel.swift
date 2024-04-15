@@ -48,6 +48,21 @@ class LoginViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
+    func checkAuthentication() async -> Bool {
+        let credentials = await authenticationManager
+            .retrieveStoredToken()
+        if let credentials, !credentials.isExpired {
+            await setLoggedIn(true)
+            return true
+        }
+        return false
+    }
+
+    @MainActor
+    private func setLoggedIn(_ value: Bool) {
+        loggedIn = value
+    }
+
     func login() {
         guard !isLoggingIn, !username.isEmpty, !password.isEmpty else {
             return
