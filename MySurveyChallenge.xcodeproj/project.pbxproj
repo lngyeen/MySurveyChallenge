@@ -45,6 +45,19 @@
 		F87F19F62BCB9359003A2CA6 /* DummyRequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19F52BCB9359003A2CA6 /* DummyRequestEndpoint.swift */; };
 		F87F1A012BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */; };
 		F87F1A052BCB9C20003A2CA6 /* HTTPRequestStubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */; };
+		F881C22B2BCD769F009B7A7A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C22A2BCD769F009B7A7A /* LoadingView.swift */; };
+		F881C22D2BCD76C0009B7A7A /* PageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C22C2BCD76C0009B7A7A /* PageControlView.swift */; };
+		F881C22F2BCD76D7009B7A7A /* SurveyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C22E2BCD76D7009B7A7A /* SurveyCardView.swift */; };
+		F881C2312BCD76F0009B7A7A /* SurveyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C2302BCD76F0009B7A7A /* SurveyListView.swift */; };
+		F881C2332BCD7729009B7A7A /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C2322BCD7729009B7A7A /* CircularButton.swift */; };
+		F881C2352BCD7758009B7A7A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C2342BCD7758009B7A7A /* ErrorView.swift */; };
+		F881C2372BCD7916009B7A7A /* SurveyDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C2362BCD7916009B7A7A /* SurveyDetailScreen.swift */; };
+		F881C23B2BCD7970009B7A7A /* SurveyUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C23A2BCD7970009B7A7A /* SurveyUIModel.swift */; };
+		F881C23D2BCD7989009B7A7A /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C23C2BCD7989009B7A7A /* Date+.swift */; };
+		F881C2402BCD7B92009B7A7A /* SurveyUIModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C23F2BCD7B92009B7A7A /* SurveyUIModelMapper.swift */; };
+		F881C2452BCD7C09009B7A7A /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C2442BCD7C09009B7A7A /* Survey.swift */; };
+		F881C24A2BCD8095009B7A7A /* SurveyUIModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C2492BCD8095009B7A7A /* SurveyUIModelMapperSpec.swift */; };
+		F881C24C2BCD80AE009B7A7A /* SurveyUIModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F881C24B2BCD80AE009B7A7A /* SurveyUIModelSpec.swift */; };
 		F89B878C2BCC92CE005DADF3 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B878B2BCC92CE005DADF3 /* DI.swift */; };
 		F89B878F2BCC93A5005DADF3 /* LoginDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B878E2BCC93A5005DADF3 /* LoginDI.swift */; };
 		F89B87982BCC9725005DADF3 /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B87972BCC9725005DADF3 /* AppDI.swift */; };
@@ -141,6 +154,19 @@
 		F87F19F82BCB93EC003A2CA6 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		F87F1A002BCB9B4D003A2CA6 /* NetworkJSONAPIClientSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONAPIClientSpec.swift; sourceTree = "<group>"; };
 		F87F1A042BCB9C20003A2CA6 /* HTTPRequestStubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestStubber.swift; sourceTree = "<group>"; };
+		F881C22A2BCD769F009B7A7A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F881C22C2BCD76C0009B7A7A /* PageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlView.swift; sourceTree = "<group>"; };
+		F881C22E2BCD76D7009B7A7A /* SurveyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCardView.swift; sourceTree = "<group>"; };
+		F881C2302BCD76F0009B7A7A /* SurveyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListView.swift; sourceTree = "<group>"; };
+		F881C2322BCD7729009B7A7A /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		F881C2342BCD7758009B7A7A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F881C2362BCD7916009B7A7A /* SurveyDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailScreen.swift; sourceTree = "<group>"; };
+		F881C23A2BCD7970009B7A7A /* SurveyUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUIModel.swift; sourceTree = "<group>"; };
+		F881C23C2BCD7989009B7A7A /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		F881C23F2BCD7B92009B7A7A /* SurveyUIModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUIModelMapper.swift; sourceTree = "<group>"; };
+		F881C2442BCD7C09009B7A7A /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		F881C2492BCD8095009B7A7A /* SurveyUIModelMapperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUIModelMapperSpec.swift; sourceTree = "<group>"; };
+		F881C24B2BCD80AE009B7A7A /* SurveyUIModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUIModelSpec.swift; sourceTree = "<group>"; };
 		F89B878B2BCC92CE005DADF3 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		F89B878E2BCC93A5005DADF3 /* LoginDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDI.swift; sourceTree = "<group>"; };
 		F89B87972BCC9725005DADF3 /* AppDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDI.swift; sourceTree = "<group>"; };
@@ -351,6 +377,7 @@
 			children = (
 				F86EDD022BCBE171004E98C6 /* View+.swift */,
 				F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */,
+				F881C23C2BCD7989009B7A7A /* Date+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -465,6 +492,7 @@
 				F87F19882BCB6AF2003A2CA6 /* Shared */,
 				F86EDCF52BCBDF22004E98C6 /* Presentation */,
 				F89B87902BCC9693005DADF3 /* Application */,
+				F881C2422BCD7BEC009B7A7A /* Domain */,
 				F82B180E2BCD275F0003FE37 /* Device */,
 				F87F19D72BCB8412003A2CA6 /* Data */,
 			);
@@ -690,6 +718,63 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		F881C2382BCD7937009B7A7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F881C23A2BCD7970009B7A7A /* SurveyUIModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F881C23E2BCD7B85009B7A7A /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				F881C23F2BCD7B92009B7A7A /* SurveyUIModelMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		F881C2422BCD7BEC009B7A7A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F881C2432BCD7BFA009B7A7A /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F881C2432BCD7BFA009B7A7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F881C2442BCD7C09009B7A7A /* Survey.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F881C2462BCD8050009B7A7A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F881C2482BCD8065009B7A7A /* Mappers */,
+				F881C2472BCD805E009B7A7A /* Models */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F881C2472BCD805E009B7A7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F881C24B2BCD80AE009B7A7A /* SurveyUIModelSpec.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F881C2482BCD8065009B7A7A /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				F881C2492BCD8095009B7A7A /* SurveyUIModelMapperSpec.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
 		F89B878D2BCC9398005DADF3 /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -763,7 +848,9 @@
 		F89B87A52BCC9918005DADF3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F881C23E2BCD7B85009B7A7A /* Mappers */,
 				F89B87A62BCC9927005DADF3 /* Views */,
+				F881C2382BCD7937009B7A7A /* Models */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -772,6 +859,13 @@
 			isa = PBXGroup;
 			children = (
 				F89B87A72BCC9936005DADF3 /* HomeScreen.swift */,
+				F881C22A2BCD769F009B7A7A /* LoadingView.swift */,
+				F881C22C2BCD76C0009B7A7A /* PageControlView.swift */,
+				F881C22E2BCD76D7009B7A7A /* SurveyCardView.swift */,
+				F881C2302BCD76F0009B7A7A /* SurveyListView.swift */,
+				F881C2322BCD7729009B7A7A /* CircularButton.swift */,
+				F881C2342BCD7758009B7A7A /* ErrorView.swift */,
+				F881C2362BCD7916009B7A7A /* SurveyDetailScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -872,6 +966,7 @@
 			isa = PBXGroup;
 			children = (
 				F89B87D92BCCA6ED005DADF3 /* Login */,
+				F881C2462BCD8050009B7A7A /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1198,7 +1293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F881C23D2BCD7989009B7A7A /* Date+.swift in Sources */,
 				F86EDCFB2BCBDFBA004E98C6 /* LoginScreen.swift in Sources */,
+				F881C2402BCD7B92009B7A7A /* SurveyUIModelMapper.swift in Sources */,
+				F881C2452BCD7C09009B7A7A /* Survey.swift in Sources */,
 				F87F19EB2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift in Sources */,
 				F89B878C2BCC92CE005DADF3 /* DI.swift in Sources */,
 				F89B879C2BCC9766005DADF3 /* LoginUseCase.swift in Sources */,
@@ -1216,16 +1314,23 @@
 				F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */,
 				F89B87C22BCC9D19005DADF3 /* String+.swift in Sources */,
 				F87F19ED2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift in Sources */,
+				F881C22F2BCD76D7009B7A7A /* SurveyCardView.swift in Sources */,
 				F89B87B92BCC9B3A005DADF3 /* LoginDTO.swift in Sources */,
 				F89B87BF2BCC9B9E005DADF3 /* AppNetworkErrorMapper.swift in Sources */,
 				F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */,
 				F86EDD002BCBE117004E98C6 /* LoginViewModel.swift in Sources */,
 				F87F198A2BCB6B01003A2CA6 /* Config.swift in Sources */,
+				F881C22D2BCD76C0009B7A7A /* PageControlView.swift in Sources */,
 				F89B87982BCC9725005DADF3 /* AppDI.swift in Sources */,
 				F87F19DD2BCB8988003A2CA6 /* NetworkAPIError.swift in Sources */,
+				F881C23B2BCD7970009B7A7A /* SurveyUIModel.swift in Sources */,
 				F8A2FE932BCC30D6003AA6BE /* UIWindow+.swift in Sources */,
+				F881C2312BCD76F0009B7A7A /* SurveyListView.swift in Sources */,
+				F881C22B2BCD769F009B7A7A /* LoadingView.swift in Sources */,
 				F89B87A02BCC97AC005DADF3 /* LoginRepository.swift in Sources */,
+				F881C2352BCD7758009B7A7A /* ErrorView.swift in Sources */,
 				F89B87B52BCC9AFD005DADF3 /* AuthenticationRequestEndpoint.swift in Sources */,
+				F881C2372BCD7916009B7A7A /* SurveyDetailScreen.swift in Sources */,
 				F87F19D42BCB7B53003A2CA6 /* R.generated.swift in Sources */,
 				F89B87C12BCC9BF0005DADF3 /* Result+.swift in Sources */,
 				F86EDD032BCBE171004E98C6 /* View+.swift in Sources */,
@@ -1238,6 +1343,7 @@
 				F89B879E2BCC9789005DADF3 /* AuthenticationManager.swift in Sources */,
 				F89B87BB2BCC9B47005DADF3 /* UserCredentialsDTO.swift in Sources */,
 				F87F19E72BCB90B2003A2CA6 /* NetworkAPIClientFactory.swift in Sources */,
+				F881C2332BCD7729009B7A7A /* CircularButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1253,7 +1359,9 @@
 				F876B8522BCCE12B00558DCF /* UserCredentialsSpec.swift in Sources */,
 				F87F19C72BCB7566003A2CA6 /* ConfigSpec.swift in Sources */,
 				F87F1A052BCB9C20003A2CA6 /* HTTPRequestStubber.swift in Sources */,
+				F881C24A2BCD8095009B7A7A /* SurveyUIModelMapperSpec.swift in Sources */,
 				F89B87DE2BCCA720005DADF3 /* LoginUseCaseImplSpec.swift in Sources */,
+				F881C24C2BCD80AE009B7A7A /* SurveyUIModelSpec.swift in Sources */,
 				F86EDD072BCBE6AA004E98C6 /* LoginViewModelSpec.swift in Sources */,
 				F82B181D2BCD28770003FE37 /* DummyCodableModel.swift in Sources */,
 				F89B87D12BCCA1F7005DADF3 /* UserCredentialsModelMapperSpec.swift in Sources */,

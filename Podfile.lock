@@ -36,6 +36,7 @@ PODS:
   - Sourcery (2.2.2):
     - Sourcery/CLI-Only (= 2.2.2)
   - Sourcery/CLI-Only (2.2.2)
+  - SwiftUIPager (2.5.0)
   - Swinject (2.8.4)
 
 DEPENDENCIES:
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - Quick
   - R.swift
   - Sourcery
+  - SwiftUIPager
   - Swinject
 
 SPEC REPOS:
@@ -65,6 +67,7 @@ SPEC REPOS:
     - Quick
     - R.swift
     - Sourcery
+    - SwiftUIPager
     - Swinject
 
 SPEC CHECKSUMS:
@@ -81,8 +84,9 @@ SPEC CHECKSUMS:
   Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
   Sourcery: 40610fe0d6edf71c7a2f984c96727fae99b94d08
+  SwiftUIPager: b314d8923bef0bde743c904bb74fcc7a05fd3422
   Swinject: 6ba81f58fd769c9fd4b8ceced9e25a9cb137cb3c
 
-PODFILE CHECKSUM: 5dc5b8a2aa7662db31acc6769fc0b402deea73d5
+PODFILE CHECKSUM: 8e97980a9e63849e82378942bb75e06a9932d8eb
 
 COCOAPODS: 1.15.2
