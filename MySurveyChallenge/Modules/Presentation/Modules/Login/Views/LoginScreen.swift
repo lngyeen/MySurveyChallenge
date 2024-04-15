@@ -25,6 +25,7 @@ struct LoginScreen: View {
     @StateObject var viewModel: LoginViewModel
     @FocusState private var focusedField: Field?
     @State private var isFirstTimeAppear = true
+    @State private var isAnimationCompleted = false
     @State private var logoScale: CGFloat = 1
     @State private var credentialsViewOpacity: CGFloat = 0
     @State private var logoOffset: CGFloat = {
@@ -72,10 +73,25 @@ struct LoginScreen: View {
                 }
             }
             .onAppear {
-                if isFirstTimeAppear {
+                checkAuthenticationStatus()
+            }
+        }
+    }
+
+    private func checkAuthenticationStatus() {
+        if isFirstTimeAppear {
+            isFirstTimeAppear = false
+            Task {
+                let isAuthenticated = await viewModel.checkAuthentication()
+                if !isAuthenticated {
                     animate()
                 }
             }
+            return
+        }
+
+        if !isAnimationCompleted {
+            animate()
         }
     }
 
@@ -85,7 +101,7 @@ struct LoginScreen: View {
             logoOffset = 0
             credentialsViewOpacity = 1
             logoScale = Constants.smallLogoScale
-            isFirstTimeAppear = false
+            isAnimationCompleted = true
         }
     }
 
@@ -199,7 +215,8 @@ struct LoginScreen: View {
 
     private var navigationLink: some View {
         NavigationLink(
-            destination: HomeScreen(),
+            destination: HomeScreen()
+                .navigationBarHidden(true),
             isActive: $viewModel.loggedIn,
             label: {
                 EmptyView()

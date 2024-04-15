@@ -35,7 +35,7 @@ final class NetworkJSONAPIClientSpec: QuickSpec {
                     }
 
                     it("it return list of DummyJSONAPIDTO") {
-                        waitUntil { done in
+                        waitUntil(timeout: .seconds(5)) { done in
                             sut.performRequest(
                                 requestEndpoint,
                                 for: [DummyJSONAPIDTO].self
@@ -66,7 +66,7 @@ final class NetworkJSONAPIClientSpec: QuickSpec {
                     }
 
                     it("it return error") {
-                        waitUntil { done in
+                        waitUntil(timeout: .seconds(5)) { done in
                             sut.performRequest(
                                 requestEndpoint,
                                 for: [DummyJSONAPIDTO].self

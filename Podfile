@@ -18,6 +18,7 @@ target 'MySurveyChallenge' do
   pod 'R.swift'
   pod 'Swinject'
   pod 'Sourcery'
+  pod 'KeychainAccess'
 
   target 'MySurveyChallengeTests' do
     inherit! :search_paths

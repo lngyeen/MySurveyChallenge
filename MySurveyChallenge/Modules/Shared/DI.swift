@@ -52,7 +52,8 @@ extension Assembler {
     static var singletonAssemblies: [SingletonAssembly] {
         // Add SingletonAssembly here
         return [
-            AppSingletonAssembly()
+            AppSingletonAssembly(),
+            DeviceSingletonAssembly()
         ]
     }
 }
