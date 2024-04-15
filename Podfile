@@ -17,6 +17,7 @@ target 'MySurveyChallenge' do
   pod 'Japx/Alamofire'
   pod 'R.swift'
   pod 'Swinject'
+  pod 'Sourcery'
 
   target 'MySurveyChallengeTests' do
     inherit! :search_paths

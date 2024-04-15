@@ -52,6 +52,8 @@ struct LoginScreen: View {
                 credentialsView
 
                 Spacer()
+
+                navigationLink
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding([.horizontal], 24)
@@ -70,7 +72,9 @@ struct LoginScreen: View {
                 }
             }
             .onAppear {
-                animate()
+                if isFirstTimeAppear {
+                    animate()
+                }
             }
         }
     }
@@ -108,6 +112,9 @@ struct LoginScreen: View {
         VStack(alignment: .leading, spacing: 20) {
             emailField
             passwordField
+            if let error = viewModel.loginErrorMsg {
+                errorText(error)
+            }
             loginButton
         }
         .opacity(credentialsViewOpacity)
@@ -168,7 +175,7 @@ struct LoginScreen: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: Constants.buttonHeight)
                 .foregroundStyle(Color(R.color.colorDefaultOnSurface))
-                .background(viewModel.loginButtonEnabled ? Color(R.color.colorDefaultBackground) : .gray.opacity(0.7))
+                .background(Color(R.color.colorDefaultBackground))
                 .cornerRadius(10)
         }
         .disabled(!viewModel.loginButtonEnabled)
@@ -176,13 +183,29 @@ struct LoginScreen: View {
 
     private func login() {
         endEditing()
+        viewModel.login()
     }
 
     @ViewBuilder
     private var loginButtonContent: some View {
-        Text("Log in")
-            .foregroundColor(Color(R.color.colorDefaultOnSurface))
-            .font(Font(R.font.neuzeitSLTStdBookHeavy(size: 17)!))
+        if viewModel.isLoggingIn {
+            ProgressView()
+        } else {
+            Text("Log in")
+                .foregroundColor(Color(R.color.colorDefaultOnSurface))
+                .font(Font(R.font.neuzeitSLTStdBookHeavy(size: 17)!))
+        }
+    }
+
+    private var navigationLink: some View {
+        NavigationLink(
+            destination: HomeScreen(),
+            isActive: $viewModel.loggedIn,
+            label: {
+                EmptyView()
+            }
+        )
+        .hidden()
     }
 }
 
