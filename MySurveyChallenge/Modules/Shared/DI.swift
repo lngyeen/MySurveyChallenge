@@ -44,13 +44,16 @@ extension Assembler {
     static var instanceAssemblies: [InstanceAssembly] {
         // Add InstanceAssembly here
         return [
+            DataInstanceAssembly(),
             LoginInstanceAssembly()
         ]
     }
 
     static var singletonAssemblies: [SingletonAssembly] {
         // Add SingletonAssembly here
-        return []
+        return [
+            AppSingletonAssembly()
+        ]
     }
 }
 

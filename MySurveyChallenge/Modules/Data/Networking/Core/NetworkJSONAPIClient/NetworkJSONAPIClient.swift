@@ -91,6 +91,7 @@ final class NetworkJSONAPIClient: NetworkAPIClient {
                     }
                 }
         }
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
 }

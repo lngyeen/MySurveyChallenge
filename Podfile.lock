@@ -32,6 +32,9 @@ PODS:
     - OHHTTPStubs/Default
   - Quick (7.5.0)
   - R.swift (7.3.2)
+  - Sourcery (2.2.2):
+    - Sourcery/CLI-Only (= 2.2.2)
+  - Sourcery/CLI-Only (2.2.2)
   - Swinject (2.8.4)
 
 DEPENDENCIES:
@@ -42,6 +45,7 @@ DEPENDENCIES:
   - OHHTTPStubs/Swift
   - Quick
   - R.swift
+  - Sourcery
   - Swinject
 
 SPEC REPOS:
@@ -57,6 +61,7 @@ SPEC REPOS:
     - OHHTTPStubs
     - Quick
     - R.swift
+    - Sourcery
     - Swinject
 
 SPEC CHECKSUMS:
@@ -71,8 +76,9 @@ SPEC CHECKSUMS:
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  Sourcery: 40610fe0d6edf71c7a2f984c96727fae99b94d08
   Swinject: 6ba81f58fd769c9fd4b8ceced9e25a9cb137cb3c
 
-PODFILE CHECKSUM: 5039fcf004a792fbd3ffcc5ec9e085d149321fa0
+PODFILE CHECKSUM: 8031afbd0ff5be7745e31eb68962cd00de2c92a0
 
 COCOAPODS: 1.15.2
