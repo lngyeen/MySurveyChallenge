@@ -1,0 +1,22 @@
+# Template App Center distribution to be used by build.yml
+
+parameters:
+- name: appFile
+  type: string
+
+steps:
+  - bash: |
+      currentBranch=$(build.sourceBranch)
+      echo "BRANCH: $currentBranch" > release-notes.txt
+      git log --pretty=format:"'%s %Cgreen(%cr)'" --abbrev-commit --since=2.weeks | grep "MIGPD" | grep -v "Merge" | head -5 >> release-notes.txt
+    displayName: Create release notes for AppCenterDistribute
+      
+  - task: AppCenterDistribute@3
+    displayName: Upload application to AppCenter
+    inputs:
+      serverEndpoint: '$(appCenterServerEndpoint)'
+      appSlug: '$(appCenterAppSlug)'
+      appFile: '${{parameters.appFile}}'
+      releaseNotesOption: 'file'
+      releaseNotesFile: 'release-notes.txt'
+      destinationType: 'groups'

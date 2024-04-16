@@ -1,0 +1,28 @@
+parameters:
+ # Apple provisioning profile file name
+- name: provProfileSecureFile
+  type: string
+
+ # Signing Certificate file name
+- name: certSecureFile
+  type: string
+
+ # Signing Certificate password
+- name: certPwd
+  type: string
+  
+steps:
+- checkout: self
+  displayName: Checkout source code
+  persistCredentials: true
+
+- task: InstallAppleCertificate@2
+  displayName: Install Apple certificate
+  inputs:
+    certSecureFile: ${{ parameters.certSecureFile }}
+    certPwd: ${{ parameters.certPwd }}
+
+- task: InstallAppleProvisioningProfile@1
+  displayName: Install Apple provisioning profile
+  inputs:
+    provProfileSecureFile: $({{parameters.provProfileSecureFile}})

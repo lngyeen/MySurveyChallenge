@@ -1,0 +1,116 @@
+# Pipeline to build app and submit to AppStore/AppCenter
+
+name: $(Date:MMddHHmm)
+
+variables:
+  - group: 'iOS App Info' # Store app info (workspace, target, scheme, bundleId, teamId...)
+  - group: 'iOS App Secrets' # Store app secrets (certificate, password, AppStore API Key...)
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+      - develop
+      - release/*
+
+stages:
+
+  # Run if (Build.Reason IS `PullRequest`)
+  - ${{ if eq(variables['Build.Reason'], 'PullRequest') }}:
+    #
+    # Run SwiftLint
+    #
+    - stage: SwiftLint
+      displayName: 'SwiftLint'
+      jobs:
+        - template: ios-lint.yml
+
+  # Run if Build.Reason IS NOT `PullRequest`
+  - ${{ if ne(variables['Build.Reason'], 'PullRequest') }}:
+    #
+    # Build Dev-Development when have merge/commit to `develop` branch
+    #
+    - stage: Build_Dev_Development
+      displayName: Build Dev Development
+      dependsOn: []
+      jobs:
+        - template: build.yml
+          condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
+          parameters:
+            workspace: $(appWorkspace)
+            target: $(appTargetDev)
+            scheme: $(appSchemeDev)
+            appIdentifier: $(appBundleIdDev)
+            exportMethod: development
+            codeSigningConfig:
+              teamId: $(appleTeamId)
+              provProfile: $(appProvisioningProfileDev)
+              certSecureFile: $(appCertificateDev)
+              certPwd: '$(appCertificatePasswordDev)'
+            incrementBuildNumber: true
+            pushIncrementVersion: true
+            publishToAppStore: true
+            publishToAppCenter: true
+
+    #
+    # Build Staging-Ad-hoc when have merge/commit to `release/*` branches
+    #
+    - stage: Build_Staging_Adhoc
+      displayName: Build Staging Ad-hoc
+      dependsOn: []
+      jobs:
+        - template: build.yml
+          condition: eq(variables['Build.SourceBranch'], 'refs/heads/release/*')
+          parameters:
+            workspace: $(appWorkspace)
+            target: $(appTargetStaging)
+            scheme: $(appSchemeStaging)
+            appIdentifier: $(appBundleIdStaging)
+            exportMethod: ad-hoc
+            codeSigningConfig:
+              teamId: $(appleTeamId)
+              provProfile: $(appProvisioningProfileStaging)
+              certSecureFile: $(appCertificateStaging)
+              certPwd: '$(appCertificatePasswordStaging)'
+            incrementBuildNumber: true
+            pushIncrementVersion: true
+            publishToAppStore: true
+            publishToAppCenter: true
+
+    #
+    # Build Prod-AppStore when have merge/commit to `main` branche
+    #
+    - stage: Build_Prod_AppStore
+      displayName: Build Prod AppStore
+      dependsOn: []
+      jobs:
+        - template: build.yml
+          parameters:
+            workspace: $(appWorkspace)
+            target: $(appTargetProd)
+            scheme: $(appSchemeProd)
+            appIdentifier: $(appBundleIdProd)
+            exportMethod: app-store
+            codeSigningConfig:
+              teamId: $(appleTeamId)
+              provProfile: $(appProvisioningProfileProd)
+              certSecureFile: $(appCertificateProd)
+              certPwd: '$(appCertificatePasswordProd)'
+            incrementBuildNumber: true
+            publishToAppStore: true
+            publishToAppCenter: false
+
+  # Run if (Build.Reason IS NOT `PullRequest`
+  - ${{ if ne(variables['Build.Reason'], 'PullRequest') }}:
+    # 
+    # Unit Test
+    #
+    - stage: Unit_Test
+      displayName: Unit Test
+      dependsOn: []
+      jobs:
+        - template: ios-unit-test.yml
+          parameters:
+            workspace: $(appWorkspace)
+            scheme: $(appSchemeDev)

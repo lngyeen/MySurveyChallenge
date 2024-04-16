@@ -1,0 +1,42 @@
+jobs:
+- job: RunSwiftLint
+  displayName: 'Run SwiftLint'
+  variables:
+    output_file: swiftlint.html
+    violations_found: false
+  pool:
+    vmImage: macOS-latest
+  steps:
+  - checkout: self
+
+  - bash: |
+      changed_files=$(git diff --name-only @~ @ --diff-filter=d -- '*.swift')
+
+      while IFS= read -r line; do
+        file_array+=("$line")
+      done <<<"$changed_files"
+
+      if [[ ${#file_array[@]} -gt 0 ]]; then
+        swiftlint_output=$(swiftlint lint "${file_array[@]}")
+        output_line_count=$(echo "$swiftlint_output" | wc -l)
+        if [[ "$output_line_count" -gt 1 ]]; then
+          swiftlint lint "${file_array[@]}" --reporter html > "$(output_file)"
+          echo "##vso[task.setvariable variable=violations_found]true"
+        fi
+      else
+        echo "No lint results found."
+      fi
+    displayName: 'Run SwiftLint for Modified Files'
+
+  - task: PublishPipelineArtifact@1
+    condition: eq(variables['violations_found'], 'true')
+    displayName: 'Publish HTML Report'
+    inputs:
+      targetPath: '$(System.DefaultWorkingDirectory)/$(output_file)'
+      artifact: 'LintResults'
+
+  - bash: |
+      echo "SwiftLint violations found"
+      exit 1
+    condition: eq(variables['violations_found'], 'true')
+    displayName: 'Check violation files'
