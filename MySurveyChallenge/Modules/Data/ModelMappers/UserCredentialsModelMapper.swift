@@ -15,4 +15,10 @@ enum UserCredentialsModelMapper {
                                refreshToken: dto.refreshToken,
                                createdAt: dto.createdAt)
     }
+
+    static func refreshTokenDtoFrom(model: UserCredentials) -> RefreshTokenDTO {
+        return RefreshTokenDTO(refreshToken: model.refreshToken,
+                               clientId: Config.current.clientId,
+                               clientSecret: Config.current.clientSecret)
+    }
 }

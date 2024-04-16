@@ -84,6 +84,9 @@ struct SurveyCardView: View {
                     switch phase {
                     case .empty:
                         ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: Color(R.color.colorDefaultOnSurfaceInverted)))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+
                     case .success(let image):
                         image
                             .resizable()
@@ -91,8 +94,10 @@ struct SurveyCardView: View {
                             .frame(width: geo.size.width,
                                    height: geo.size.height)
                             .clipped()
+
                     case .failure:
                         EmptyView()
+
                     @unknown default:
                         EmptyView()
                     }

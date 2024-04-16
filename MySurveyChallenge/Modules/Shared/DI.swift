@@ -45,7 +45,8 @@ extension Assembler {
         // Add InstanceAssembly here
         return [
             DataInstanceAssembly(),
-            LoginInstanceAssembly()
+            LoginInstanceAssembly(),
+            HomeInstanceAssembly()
         ]
     }
 

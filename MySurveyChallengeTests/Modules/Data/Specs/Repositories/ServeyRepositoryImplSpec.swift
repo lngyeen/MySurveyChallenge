@@ -1,0 +1,85 @@
+//
+//  ServeyRepositoryImplSpec.swift
+//  MySurveyChallengeTests
+//
+//  Created by Nguyen Truong Luu on 4/16/24.
+//
+
+import Combine
+import Foundation
+import Nimble
+import Quick
+
+@testable import MySurveyChallenge
+
+final class ServeyRepositoryImplSpec: QuickSpec {
+    override class func spec() {
+        describe("SurveyRepositoryImpl") {
+            var sut: SurveyRepositoryImpl!
+            var networkClient: NetworkJSONAPIClient!
+            var cancellables: Set<AnyCancellable> = []
+            
+            describe("it getSurveys") {
+                beforeEach {}
+                
+                afterEach {
+                    HTTPRequestStubber.removeAllStubs()
+                    DI.singleton.resolve(AuthenticationManager.self)!.removeCredentials()
+                    cancellables.removeAll()
+                }
+                
+                context("when network return value") {
+                    beforeEach {
+                        networkClient = NetworkJSONAPIClient()
+                        sut = SurveyRepositoryImpl(networkAPIClient: networkClient)
+                    }
+                    
+                    it("it return value as a list of Surveys") {
+                        HTTPRequestStubber.stub(SurveyRequestEndpoint.getSurveys(pageNumber: 1, pageSize: 2))
+                        DI.singleton.resolve(AuthenticationManager.self)!.saveCredentials(UserCredentials.sample)
+                         
+                        waitUntil { done in
+                            sut.getSurveys(pageNumber: 1, pageSize: 2)
+                                .sink { response in
+                                    switch response {
+                                    case .success(let success):
+                                        print(success)
+                                    case .failure(let error):
+                                        print(error)
+                                        fail("Get surveys success")
+                                    }
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+                    }
+                }
+                
+                context("when network return error") {
+                    beforeEach {
+                        networkClient = NetworkJSONAPIClient()
+                        sut = SurveyRepositoryImpl(networkAPIClient: networkClient)
+                    }
+                    
+                    it("it return error") {
+                        HTTPRequestStubber.stubError(SurveyRequestEndpoint.getSurveys(pageNumber: 1, pageSize: 2))
+                        DI.singleton.resolve(AuthenticationManager.self)!.saveCredentials(UserCredentials.sample)
+                         
+                        waitUntil { done in
+                            sut.getSurveys(pageNumber: 1, pageSize: 2)
+                                .sink { response in
+                                    switch response {
+                                    case .success:
+                                        fail("Get surveys should fail")
+                                    case .failure: break
+                                    }
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

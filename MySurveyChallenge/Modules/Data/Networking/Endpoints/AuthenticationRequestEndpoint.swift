@@ -10,6 +10,7 @@ import Foundation
 
 enum AuthenticationRequestEndpoint: RequestEndpoint {
     case login(loginDto: LoginDTO)
+    case refreshToken(refreshTokenDto: RefreshTokenDTO)
 
     var path: String { "/api/v1/oauth/token" }
 
@@ -20,14 +21,22 @@ enum AuthenticationRequestEndpoint: RequestEndpoint {
     var parameters: Parameters? {
         switch self {
         case .login(let loginDto):
-            if let data = try? JSONEncoder().encode(loginDto) {
-                return try? JSONSerialization.jsonObject(with: data, options: []) as? Parameters
-            }
-            return nil
+            return encodeToParameters(dto: loginDto)
+        case .refreshToken(let refreshTokenDto):
+            return encodeToParameters(dto: refreshTokenDto)
         }
     }
 
     var sampleData: Data {
         UserCredentialsDTO.json.data
+    }
+
+    private func encodeToParameters<T: Encodable>(dto: T) -> Parameters? {
+        do {
+            let data = try JSONEncoder().encode(dto)
+            return try JSONSerialization.jsonObject(with: data, options: []) as? Parameters
+        } catch {
+            return nil
+        }
     }
 }
