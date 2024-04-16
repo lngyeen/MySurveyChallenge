@@ -49,7 +49,7 @@ struct SurveyListView: View {
         PageControlView(currentPage: $page.index,
                         numberOfPages: surveys.count)
             .padding(.leading, -14)
-            .padding(.bottom, 154)
+            .padding(.bottom, 174)
             .ignoresSafeArea()
     }
 
@@ -60,7 +60,7 @@ struct SurveyListView: View {
             Image(R.image.arrow)
         }
         .padding(.bottom, 20)
-        .padding(.trailing, 20)
+        .padding(.trailing, 26)
     }
 
     private var navigationLink: some View {
