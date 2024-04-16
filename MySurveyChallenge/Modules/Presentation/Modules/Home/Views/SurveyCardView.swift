@@ -22,22 +22,22 @@ struct SurveyCardView: View {
         }
         .padding(.horizontal, 20)
         .padding(.top, 16)
-        .padding(.bottom, 20)
+        .padding(.bottom, 26)
         .background(backgroundView)
         .background(Color(R.color.colorDefaultBackgroundDark))
     }
 
     private var surveyInfoView: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            createdAtLabel
-
-            activeAtLabel
-
+        VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 8) {
+                createdAtLabel
+                activeAtLabel
+            }
             Spacer()
-
-            titleLabel
-
-            descriptionLabel
+            VStack(alignment: .leading, spacing: 24) {
+                titleLabel
+                descriptionLabel
+            }
         }
         .frame(
             maxWidth: .infinity,
@@ -49,6 +49,7 @@ struct SurveyCardView: View {
     private var createdAtLabel: some View {
         Text(survey.createdAtString.uppercased())
             .font(Font(R.font.neuzeitSLTStdBookHeavy(size: 13)!))
+            .lineSpacing(18 - 13)
             .foregroundColor(Color(R.color.colorDefaultOnSurfaceInverted))
             .lineLimit(2)
     }
@@ -56,6 +57,7 @@ struct SurveyCardView: View {
     private var activeAtLabel: some View {
         Text(survey.activeAtString)
             .font(Font(R.font.neuzeitSLTStdBookHeavy(size: 34)!))
+            .lineSpacing(41 - 34)
             .foregroundColor(Color(R.color.colorDefaultOnSurfaceInverted))
             .lineLimit(2)
     }
@@ -63,6 +65,7 @@ struct SurveyCardView: View {
     private var titleLabel: some View {
         Text(survey.title ?? "")
             .font(Font(R.font.neuzeitSLTStdBookHeavy(size: 28)!))
+            .lineSpacing(34 - 28)
             .foregroundColor(Color(R.color.colorDefaultOnSurfaceInverted))
             .lineLimit(2)
     }
@@ -70,6 +73,7 @@ struct SurveyCardView: View {
     private var descriptionLabel: some View {
         Text(survey.description ?? "")
             .font(Font(R.font.neuzeitSLTStdBook(size: 17)!))
+            .lineSpacing(22 - 17)
             .foregroundColor(Color(R.color.colorDefaultOnSurfaceSubdued))
             .lineLimit(2)
     }
