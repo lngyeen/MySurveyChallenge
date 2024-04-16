@@ -1,0 +1,22 @@
+# Template App Store and TestFlight distribution to be used by build.yml
+
+parameters:
+- name: ipaPath
+  type: string
+  default: '**/*.ipa'
+
+- name: appIdentifier
+  type: string
+
+steps:
+  - task: AppStoreRelease@1
+    inputs:
+      authType: 'ApiKey'
+      ipaPath: '${{parameters.ipaPath}}'
+      apiKeyId: '$(appStoreConnectKeyId)'
+      apiKeyIssuerId: '$(appStoreConnectIssuerId)'
+      apitoken: '$(appStoreConnectApiPrivateKey)'
+      releaseTrack: 'TestFlight'
+      appIdentifier: '${{parameters.appIdentifier}}'
+      appType: 'iOS'
+      shouldSkipWaitingForProcessing: true

@@ -1,0 +1,136 @@
+# This pipeline is used to create a new build and upload it to AppCenter
+
+parameters:
+- name: workspace
+  type: string
+
+- name: target
+  type: string
+
+- name: scheme
+  type: string
+
+- name: appIdentifier
+  type: string
+
+- name: exportMethod
+  type: string
+  default: 'development'
+
+- name: codeSigningConfig
+  type: object
+  default:
+    # Apple team ID
+    - name: teamId
+      type: string
+    
+    # Apple provisioning profile file name
+    - name: provProfile
+      type: string
+
+    # Signing Certificate file name
+    - name: certSecureFile
+      type: string
+
+    # Signing Certificate password
+    - name: certPwd
+      type: string
+
+- name: incrementBuildNumber
+  type: boolean
+  default: true
+
+- name: pushIncrementVersion
+  type: boolean
+  default: true
+
+- name: publishToAppCenter
+  type: boolean
+  default: true
+
+- name: publishToAppStore
+  type: boolean
+  default: true
+ 
+#
+# Template jobs
+#
+jobs:   
+  - job: Build_app
+    displayName: '${{ parameters.scheme }}'
+    pool:
+      vmImage: macOS-latest
+
+    steps:
+      - template: templates/ios-checkout-and-install-certificate.yml
+        parameters:
+          provProfileSecureFile: $({{parameters.codeSigningConfig.provProfile}})
+          certSecureFile: ${{ parameters.codeSigningConfig.signingCertificate.certSecureFile }}
+          certPwd: ${{ parameters.codeSigningConfig.signingCertificate.certPwd }}
+
+      - task: Cache@2
+        inputs:
+          key: 'pods | "$(Agent.OS)" | Podfile.lock'
+          path: 'Pods'
+          cacheHitVar: 'PODS_CACHE_RESTORED'
+          
+      - task: CocoaPods@0
+        displayName: 'pod install using the CocoaPods task with defaults'
+        condition: ne(variables.PODS_CACHE_RESTORED, 'true')
+      
+      - ${{ if ne(variables['Build.Reason'], 'PullRequest') }}:
+        - bash: |
+            fastlane run increment_build_number build_number:$(Build.BuildNumber)
+            git config user.name "service account" && git config user.email "serviceaccount@openwt.com"
+            git add .
+          condition: eq(${{ parameters.incrementBuildNumber }}, true)
+          displayName: Increment build number
+          
+      - task: Xcode@5
+        displayName: Build application
+        inputs:
+          sdk: 'iphoneos'
+          actions: 'clean build'
+          xcodeVersion: '15'
+          xcWorkspacePath: ${{ parameters.workspace }}
+          scheme: ${{ parameters.scheme }}
+          exportMethod: ${{ parameters.exportMethod }}
+          packageApp: true
+          signingOption: 'manual'
+          teamId: ${{ parameters.codeSigningConfig.teamId }}
+          signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
+          provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
+
+      - task: CopyFiles@2
+        displayName: Retrieve ipa file
+        inputs:
+          contents: '**/*.ipa'
+          targetFolder: '$(build.artifactStagingDirectory)'
+          overWrite: true
+          flattenFolders: true
+          
+      - task: PublishBuildArtifacts@1
+        displayName: Upload ipa file to azure container
+        inputs:
+          pathtoPublish: '$(build.artifactStagingDirectory)'
+          artifactName: ${{ parameters.scheme }}
+          publishLocation: 'Container'
+          
+      - ${{ if and(ne(variables['Build.Reason'], 'PullRequest'), eq(parameters.publishToAppCenter, true)) }}:
+        - template: templates/ios-app-center-deployment.yml
+          parameters:
+            appFile: '$(build.artifactStagingDirectory)/*.ipa'
+
+      - ${{ if and(ne(variables['Build.Reason'], 'PullRequest'), eq(parameters.publishToAppStore, true)) }}:
+        - template: templates/ios-app-store-deployment.yml
+          parameters:
+            ipaPath: '$(build.artifactStagingDirectory)/*.ipa'
+            appIdentifier: ${{ parameters.appIdentifier }}
+
+      - ${{ if ne(variables['Build.Reason'], 'PullRequest') }}:
+        - bash: |
+            git commit -m 'Update iOS version code to $(Build.BuildNumber) ***NO_CI***' && git push origin HEAD:${{ replace(variables['Build.SourceBranch'], 'refs/heads/', '') }}
+          displayName: 'Push increment version code commit'
+          condition: and(succeededOrFailed(), eq(${{ parameters.incrementBuildNumber }}, true), eq(${{ parameters.pushIncrementVersion }}, true))
+        - publish: Pods/Target Support Files/Pods-${{parameters.target}}/Pods-${{parameters.target}}-acknowledgements.markdown
+          artifact: ${{parameters.target}}-Licenses

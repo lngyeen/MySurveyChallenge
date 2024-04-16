@@ -1,0 +1,49 @@
+# This pipeline is used to run Unit Test, publish test result (JUnit) to Azure Pipeline and Publish SonarCloud's Quality Gate result on the Azure Pipelines build result.
+
+parameters:
+- name: workspace
+  type: string
+
+- name: scheme 
+  type: string
+ 
+jobs:
+  - job: Unit_Tests
+    displayName: Execute unit tests
+    pool:
+      vmImage: macOS-latest
+
+    steps:
+      - bash: |
+          sudo xcode-select --switch /Applications/Xcode_15.0.0.app/Contents/Developer
+          xcode-select --print-path
+        displayName: Set the appropriate Swift toolchain
+ 
+      - task: Cache@2
+        inputs:
+          key: 'pods | "$(Agent.OS)" | Podfile.lock'
+          path: 'Pods'
+          cacheHitVar: 'PODS_CACHE_RESTORED'
+
+      - task: CocoaPods@0
+        displayName: 'pod install using the CocoaPods task with defaults'
+        condition: ne(variables.PODS_CACHE_RESTORED, 'true')
+
+      - task: Xcode@5
+        displayName: Run tests
+        inputs:
+          sdk: 'iphonesimulator'
+          actions: 'clean test'
+          xcodeVersion: '15'
+          xcWorkspacePath: ${{ parameters.workspace }}
+          scheme: ${{ parameters.scheme }}
+          args: '-destination "platform=iOS Simulator,name=iPhone 15 Pro" -enableCodeCoverage YES -derivedDataPath Build/'
+          publishJUnitResults: true
+          testRunTitle: 'Unit tests'
+          
+      - bash: |
+          bash xccov-to-sonarqube-generic.sh Build/Logs/Test/*.xcresult/ > sonarqube-generic-coverage.xml
+        displayName: Convert Xcode coverage to supported SonarCloud format
+
+      - publish: $(System.DefaultWorkingDirectory)/sonarqube-generic-coverage.xml
+        artifact: ${{ parameters.scheme }}-Coverage
