@@ -59,7 +59,7 @@ final class NetworkJSONAPIClient: NetworkAPIClient {
             interceptor: configuration.interceptor
         )
         .validate()
-        .publishData(queue: .global(qos: .background))
+        .publishData(queue: .global(qos: .userInteractive))
         .map { response in
             response
                 .mapError { error in

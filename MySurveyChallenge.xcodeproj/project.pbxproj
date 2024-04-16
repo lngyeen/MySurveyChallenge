@@ -34,7 +34,7 @@
 		F873CD9A2BCDF2120029844C /* HomeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD992BCDF2120029844C /* HomeViewModelSpec.swift */; };
 		F873CD9C2BCDF2390029844C /* GetSurveysUseCaseImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD9B2BCDF2390029844C /* GetSurveysUseCaseImplSpec.swift */; };
 		F873CD9E2BCDF2620029844C /* SurveyModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD9D2BCDF2620029844C /* SurveyModelMapperSpec.swift */; };
-		F873CDA02BCDF2730029844C /* ServeyRepositoryImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD9F2BCDF2730029844C /* ServeyRepositoryImplSpec.swift */; };
+		F873CDA02BCDF2730029844C /* SurveyRepositoryImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD9F2BCDF2730029844C /* SurveyRepositoryImplSpec.swift */; };
 		F876B8522BCCE12B00558DCF /* UserCredentialsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F876B8512BCCE12B00558DCF /* UserCredentialsSpec.swift */; };
 		F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */; };
 		F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F195B2BCB559C003A2CA6 /* ContentView.swift */; };
@@ -97,6 +97,11 @@
 		F89B87D62BCCA28D005DADF3 /* LoginRepositoryImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B87D52BCCA28D005DADF3 /* LoginRepositoryImplSpec.swift */; };
 		F89B87DE2BCCA720005DADF3 /* LoginUseCaseImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B87DD2BCCA720005DADF3 /* LoginUseCaseImplSpec.swift */; };
 		F8A2FE932BCC30D6003AA6BE /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */; };
+		F8CEA4BF2BCF37F1000227AB /* SurveyRepositoryWithCachingImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA4BE2BCF37F1000227AB /* SurveyRepositoryWithCachingImpl.swift */; };
+		F8CEA4C22BCF38EC000227AB /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = F8CEA4C12BCF38EC000227AB /* CachedAsyncImage */; };
+		F8CEA4C42BCF3C30000227AB /* LocalStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA4C32BCF3C30000227AB /* LocalStoreService.swift */; };
+		F8CEA4C62BCF3C5A000227AB /* LocalStoreServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA4C52BCF3C5A000227AB /* LocalStoreServiceImpl.swift */; };
+		F8CEA4C82BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA4C72BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,7 +155,7 @@
 		F873CD992BCDF2120029844C /* HomeViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelSpec.swift; sourceTree = "<group>"; };
 		F873CD9B2BCDF2390029844C /* GetSurveysUseCaseImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSurveysUseCaseImplSpec.swift; sourceTree = "<group>"; };
 		F873CD9D2BCDF2620029844C /* SurveyModelMapperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMapperSpec.swift; sourceTree = "<group>"; };
-		F873CD9F2BCDF2730029844C /* ServeyRepositoryImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServeyRepositoryImplSpec.swift; sourceTree = "<group>"; };
+		F873CD9F2BCDF2730029844C /* SurveyRepositoryImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepositoryImplSpec.swift; sourceTree = "<group>"; };
 		F876B8512BCCE12B00558DCF /* UserCredentialsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialsSpec.swift; sourceTree = "<group>"; };
 		F87F19562BCB559C003A2CA6 /* MySurveyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySurveyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySurveyChallengeApp.swift; sourceTree = "<group>"; };
@@ -219,6 +224,10 @@
 		F89B87D52BCCA28D005DADF3 /* LoginRepositoryImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryImplSpec.swift; sourceTree = "<group>"; };
 		F89B87DD2BCCA720005DADF3 /* LoginUseCaseImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseImplSpec.swift; sourceTree = "<group>"; };
 		F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
+		F8CEA4BE2BCF37F1000227AB /* SurveyRepositoryWithCachingImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepositoryWithCachingImpl.swift; sourceTree = "<group>"; };
+		F8CEA4C32BCF3C30000227AB /* LocalStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreService.swift; sourceTree = "<group>"; };
+		F8CEA4C52BCF3C5A000227AB /* LocalStoreServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreServiceImpl.swift; sourceTree = "<group>"; };
+		F8CEA4C72BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepositoryWithCachingImplSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AEE53369D4DA94C5E36BA1E /* Pods_MySurveyChallenge.framework in Frameworks */,
+				F8CEA4C22BCF38EC000227AB /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				F82B180C2BCD26D60003FE37 /* SecureStoreService.swift */,
+				F8CEA4C32BCF3C30000227AB /* LocalStoreService.swift */,
 			);
 			path = DeviceServices;
 			sourceTree = "<group>";
@@ -302,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				F82B18142BCD27B20003FE37 /* KeychainStoreService.swift */,
+				F8CEA4C52BCF3C5A000227AB /* LocalStoreServiceImpl.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -940,6 +952,7 @@
 			isa = PBXGroup;
 			children = (
 				F89B87AE2BCC99FF005DADF3 /* LoginRepositoryImpl.swift */,
+				F8CEA4BE2BCF37F1000227AB /* SurveyRepositoryWithCachingImpl.swift */,
 				F873CD8C2BCDEF550029844C /* SurveyRepositoryImpl.swift */,
 			);
 			path = Repositories;
@@ -1014,7 +1027,8 @@
 			isa = PBXGroup;
 			children = (
 				F89B87D52BCCA28D005DADF3 /* LoginRepositoryImplSpec.swift */,
-				F873CD9F2BCDF2730029844C /* ServeyRepositoryImplSpec.swift */,
+				F873CD9F2BCDF2730029844C /* SurveyRepositoryImplSpec.swift */,
+				F8CEA4C72BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1081,6 +1095,9 @@
 			dependencies = (
 			);
 			name = MySurveyChallenge;
+			packageProductDependencies = (
+				F8CEA4C12BCF38EC000227AB /* CachedAsyncImage */,
+			);
 			productName = MySurveyChallenge;
 			productReference = F87F19562BCB559C003A2CA6 /* MySurveyChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -1157,6 +1174,9 @@
 				Base,
 			);
 			mainGroup = F87F194D2BCB559C003A2CA6;
+			packageReferences = (
+				F8CEA4C02BCF38EC000227AB /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = F87F19572BCB559C003A2CA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1360,6 +1380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F881C23D2BCD7989009B7A7A /* Date+.swift in Sources */,
+				F8CEA4C42BCF3C30000227AB /* LocalStoreService.swift in Sources */,
 				F873CD872BCDEEE60029844C /* HomeDI.swift in Sources */,
 				F86EDCFB2BCBDFBA004E98C6 /* LoginScreen.swift in Sources */,
 				F873CD912BCDEFDA0029844C /* OAuthAuthenticator.swift in Sources */,
@@ -1375,6 +1396,7 @@
 				F89B879A2BCC974D005DADF3 /* AppNetworkError.swift in Sources */,
 				F82B180D2BCD26D60003FE37 /* SecureStoreService.swift in Sources */,
 				F87F19DB2BCB8967003A2CA6 /* NetworkAPIClient.swift in Sources */,
+				F8CEA4C62BCF3C5A000227AB /* LocalStoreServiceImpl.swift in Sources */,
 				F873CD8F2BCDEF7B0029844C /* SurveyRequestEndpoint.swift in Sources */,
 				F87F19E22BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift in Sources */,
 				F89B87A42BCC983D005DADF3 /* UserCredentials.swift in Sources */,
@@ -1414,6 +1436,7 @@
 				F89B87AC2BCC99CE005DADF3 /* DataDI.swift in Sources */,
 				F86EDCFE2BCBE0F5004E98C6 /* InputFieldModifier.swift in Sources */,
 				F89B87BD2BCC9B93005DADF3 /* UserCredentialsModelMapper.swift in Sources */,
+				F8CEA4BF2BCF37F1000227AB /* SurveyRepositoryWithCachingImpl.swift in Sources */,
 				F873CD842BCDEEBA0029844C /* HomeViewModel.swift in Sources */,
 				F89B879E2BCC9789005DADF3 /* AuthenticationManager.swift in Sources */,
 				F89B87BB2BCC9B47005DADF3 /* UserCredentialsDTO.swift in Sources */,
@@ -1429,9 +1452,10 @@
 			files = (
 				F89B87D62BCCA28D005DADF3 /* LoginRepositoryImplSpec.swift in Sources */,
 				F873CD9E2BCDF2620029844C /* SurveyModelMapperSpec.swift in Sources */,
+				F8CEA4C82BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift in Sources */,
 				F89B87C92BCCA0EB005DADF3 /* AutoGeneratedMocks.swift in Sources */,
 				F89B87D32BCCA200005DADF3 /* AppNetworkErrorMapperSpec.swift in Sources */,
-				F873CDA02BCDF2730029844C /* ServeyRepositoryImplSpec.swift in Sources */,
+				F873CDA02BCDF2730029844C /* SurveyRepositoryImplSpec.swift in Sources */,
 				F873CD9A2BCDF2120029844C /* HomeViewModelSpec.swift in Sources */,
 				F87F19F62BCB9359003A2CA6 /* DummyRequestEndpoint.swift in Sources */,
 				F82B181F2BCD28840003FE37 /* KeychainStoreServiceSpec.swift in Sources */,
@@ -1802,6 +1826,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F8CEA4C02BCF38EC000227AB /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F8CEA4C12BCF38EC000227AB /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8CEA4C02BCF38EC000227AB /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F87F194E2BCB559C003A2CA6 /* Project object */;
 }
