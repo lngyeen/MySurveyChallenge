@@ -10,25 +10,52 @@ import SwiftUI
 struct HomeScreen: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-    var body: some View {
-        VStack {
-            Text("Hello, World!")
+    @StateObject var viewModel: HomeViewModel
+    @State private var didFetchData = false
 
-            logoutButton
+    var body: some View {
+        ZStack(alignment: .topTrailing) {
+            if viewModel.isLoading {
+                LoadingView()
+                    .zIndex(1)
+            } else if let errorMsg = viewModel.errorMsg {
+                ErrorView(errorMessage: errorMsg) {
+                    viewModel.fetchSurveys()
+                }
+                .zIndex(2)
+            } else {
+                SurveyListView(surveys: viewModel.surveys)
+                    .zIndex(3)
+            }
+
+            if !viewModel.isLoading {
+                logoutButton
+                    .zIndex(4)
+            }
+        }
+        .background(Color(R.color.colorDefaultBackgroundDark))
+        .onAppear {
+            if !didFetchData {
+                didFetchData = true
+                viewModel.fetchSurveys()
+            }
         }
     }
 
     private var logoutButton: some View {
         Button(action: {
-            DI.singleton.resolve(AuthenticationManager.self)!.removeCredentials()
+            viewModel.logout()
             presentationMode.wrappedValue.dismiss()
         }) {
-            Text("Log out")
+            Image(R.image.userpic)
         }
-        .padding()
+        .frame(width: 36, height: 36)
+        .contentShape(Circle())
+        .padding(.top, 35)
+        .padding(.trailing, 20)
     }
 }
 
 #Preview {
-    HomeScreen()
+    HomeScreen(viewModel: DI.instance.resolve(HomeViewModel.self)!)
 }

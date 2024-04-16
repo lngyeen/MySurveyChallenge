@@ -12,5 +12,9 @@ class DataInstanceAssembly: InstanceAssembly {
         container.register(LoginRepository.self) { _ in
             LoginRepositoryImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
         }
+
+        container.register(SurveyRepository.self) { _ in
+            SurveyRepositoryImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
+        }
     }
 }

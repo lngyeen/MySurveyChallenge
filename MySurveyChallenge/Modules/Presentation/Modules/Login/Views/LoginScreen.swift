@@ -40,41 +40,39 @@ struct LoginScreen: View {
     }
 
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer()
-                    .frame(maxHeight: space)
+        VStack {
+            Spacer()
+                .frame(maxHeight: space)
 
-                logoView
+            logoView
 
-                Spacer()
-                    .frame(maxHeight: space)
+            Spacer()
+                .frame(maxHeight: space)
 
-                credentialsView
+            credentialsView
 
-                Spacer()
+            Spacer()
 
-                navigationLink
+            navigationLink
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding([.horizontal], 24)
+        .edgesIgnoringSafeArea(.top)
+        .background(backgroundView)
+        .background(Color(R.color.colorDefaultBackgroundDark))
+        .onTapGesture {
+            endEditing()
+        }
+        .onSubmit {
+            switch focusedField {
+            case .email:
+                focusedField = .password
+            default:
+                login()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding([.horizontal], 24)
-            .edgesIgnoringSafeArea(.top)
-            .background(backgroundView)
-            .background(Color(R.color.colorDefaultBackgroundDark))
-            .onTapGesture {
-                endEditing()
-            }
-            .onSubmit {
-                switch focusedField {
-                case .email:
-                    focusedField = .password
-                default:
-                    login()
-                }
-            }
-            .onAppear {
-                checkAuthenticationStatus()
-            }
+        }
+        .onAppear {
+            checkAuthenticationStatus()
         }
     }
 
@@ -215,7 +213,7 @@ struct LoginScreen: View {
 
     private var navigationLink: some View {
         NavigationLink(
-            destination: HomeScreen()
+            destination: HomeScreen(viewModel: DI.instance.resolve(HomeViewModel.self)!)
                 .navigationBarHidden(true),
             isActive: $viewModel.loggedIn,
             label: {
@@ -227,5 +225,7 @@ struct LoginScreen: View {
 }
 
 #Preview {
-    LoginScreen(viewModel: DI.instance.resolve(LoginViewModel.self)!)
+    NavigationView {
+        LoginScreen(viewModel: DI.instance.resolve(LoginViewModel.self)!)
+    }
 }

@@ -33,6 +33,22 @@ final class UserCredentialsModelMapperSpec: QuickSpec {
                     expect(userCredentials.createdAt).to(equal(1618345742.0))
                 }
             }
+
+            describe("perform refreshTokenDtoFrom") {
+                it("it returns RefreshTokenDTO") {
+                    let userCredentials = UserCredentials(accessToken: "accessToken",
+                                                          tokenType: "tokenType",
+                                                          expiresIn: 3600,
+                                                          refreshToken: "refreshToken",
+                                                          createdAt: 1618345742.0)
+
+                    let refreshTokenDTO = UserCredentialsModelMapper.refreshTokenDtoFrom(model: userCredentials)
+
+                    expect(refreshTokenDTO.refreshToken).to(equal("refreshToken"))
+                    expect(refreshTokenDTO.clientId).to(equal(Config.current.clientId))
+                    expect(refreshTokenDTO.clientSecret).to(equal(Config.current.clientSecret))
+                }
+            }
         }
     }
 }
