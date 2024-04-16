@@ -152,6 +152,9 @@ struct LoginScreen: View {
             .inputField()
             .focused($focusedField, equals: .email)
             .submitLabel(.next)
+            .onTapGesture {
+                focusedField = .email
+            }
     }
 
     private var passwordField: some View {
@@ -166,6 +169,9 @@ struct LoginScreen: View {
                 .focused($focusedField, equals: .password)
                 .textContentType(.password)
                 .submitLabel(.send)
+                .onTapGesture {
+                    focusedField = .password
+                }
         }
         .overlay(alignment: .trailing) {
             forgotPasswordButton
@@ -177,7 +183,8 @@ struct LoginScreen: View {
             Text("Forgot?")
                 .font(Font(R.font.neuzeitSLTStdBook(size: 17)!))
                 .foregroundColor(Color(R.color.colorDefaultPlaceholder))
-                .padding(.trailing, 12)
+                .frame(maxHeight: .infinity)
+                .padding(.horizontal, 12)
         }
     }
 
