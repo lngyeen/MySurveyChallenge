@@ -105,11 +105,11 @@ struct LoginScreen: View {
 
     private var backgroundView: some View {
         GeometryReader { geo in
-            Image(isFirstTimeAppear ? R.image.splash : R.image.splashBlur)
+            Image(isAnimationCompleted ? R.image.splashBlur : R.image.splash)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: geo.size.width, height: geo.size.height)
-                .animation(Constants.animationStyle, value: isFirstTimeAppear)
+                .animation(Constants.animationStyle, value: isAnimationCompleted)
         }
         .edgesIgnoringSafeArea(.all)
     }
