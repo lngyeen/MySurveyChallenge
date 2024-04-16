@@ -1,5 +1,5 @@
 //
-//  ServeyRepositoryImplSpec.swift
+//  SurveyRepositoryImplSpec.swift
 //  MySurveyChallengeTests
 //
 //  Created by Nguyen Truong Luu on 4/16/24.
@@ -12,7 +12,7 @@ import Quick
 
 @testable import MySurveyChallenge
 
-final class ServeyRepositoryImplSpec: QuickSpec {
+final class SurveyRepositoryImplSpec: QuickSpec {
     override class func spec() {
         describe("SurveyRepositoryImpl") {
             var sut: SurveyRepositoryImpl!
@@ -28,7 +28,7 @@ final class ServeyRepositoryImplSpec: QuickSpec {
                     cancellables.removeAll()
                 }
                 
-                context("when network return value") {
+                context("when network request succeeds with data") {
                     beforeEach {
                         networkClient = NetworkJSONAPIClient()
                         sut = SurveyRepositoryImpl(networkAPIClient: networkClient)
@@ -55,7 +55,7 @@ final class ServeyRepositoryImplSpec: QuickSpec {
                     }
                 }
                 
-                context("when network return error") {
+                context("when network request fails") {
                     beforeEach {
                         networkClient = NetworkJSONAPIClient()
                         sut = SurveyRepositoryImpl(networkAPIClient: networkClient)

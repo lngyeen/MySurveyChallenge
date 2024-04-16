@@ -5,9 +5,12 @@
 //  Created by Nguyen Truong Luu on 4/15/24.
 //
 
+import CachedAsyncImage
 import SwiftUI
 
 struct SurveyCardView: View {
+    static let imageCache = URLCache(memoryCapacity: 512_000_000, diskCapacity: 10_000_000_000)
+
     let survey: SurveyUIModel
 
     init(survey: SurveyUIModel) {
@@ -84,7 +87,7 @@ struct SurveyCardView: View {
            let url = URL(string: coverImageUrl)
         {
             GeometryReader { geo in
-                AsyncImage(url: url) { phase in
+                CachedAsyncImage(url: url, urlCache: SurveyCardView.imageCache) { phase in
                     switch phase {
                     case .empty:
                         ProgressView()

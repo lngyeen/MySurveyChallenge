@@ -33,7 +33,7 @@ final class LoginRepositoryImplSpec: QuickSpec {
                     cancellables.removeAll()
                 }
 
-                context("when network return value") {
+                context("when network request succeeds") {
                     beforeEach {
                         networkClient = NetworkJSONAPIClient()
                         sut = LoginRepositoryImpl(networkAPIClient: networkClient)
@@ -59,7 +59,7 @@ final class LoginRepositoryImplSpec: QuickSpec {
                     }
                 }
 
-                context("when network return error") {
+                context("when network request fails") {
                     beforeEach {
                         networkClient = NetworkJSONAPIClient()
                         sut = LoginRepositoryImpl(networkAPIClient: networkClient)
