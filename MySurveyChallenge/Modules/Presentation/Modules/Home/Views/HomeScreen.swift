@@ -40,12 +40,17 @@ struct HomeScreen: View {
                 viewModel.fetchSurveys()
             }
         }
+        .alert("Your session has expired. Please login again.",
+               isPresented: $viewModel.showAuthenticationAlert) {
+            Button("OK", role: .cancel) {
+                logout()
+            }
+        }
     }
 
     private var logoutButton: some View {
         Button(action: {
-            viewModel.logout()
-            presentationMode.wrappedValue.dismiss()
+            logout()
         }) {
             Image(R.image.userpic)
         }
@@ -53,6 +58,11 @@ struct HomeScreen: View {
         .contentShape(Circle())
         .padding(.top, 35)
         .padding(.trailing, 20)
+    }
+
+    private func logout() {
+        viewModel.logout()
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
