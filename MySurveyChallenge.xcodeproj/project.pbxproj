@@ -36,6 +36,7 @@
 		F873CD9E2BCDF2620029844C /* SurveyModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD9D2BCDF2620029844C /* SurveyModelMapperSpec.swift */; };
 		F873CDA02BCDF2730029844C /* SurveyRepositoryImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD9F2BCDF2730029844C /* SurveyRepositoryImplSpec.swift */; };
 		F876B8522BCCE12B00558DCF /* UserCredentialsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F876B8512BCCE12B00558DCF /* UserCredentialsSpec.swift */; };
+		F87A7FD42BCF856E0060EE32 /* LocalStoreServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87A7FD32BCF856E0060EE32 /* LocalStoreServiceSpec.swift */; };
 		F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */; };
 		F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F195B2BCB559C003A2CA6 /* ContentView.swift */; };
 		F87F195E2BCB559E003A2CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F195D2BCB559E003A2CA6 /* Assets.xcassets */; };
@@ -156,6 +157,7 @@
 		F873CD9D2BCDF2620029844C /* SurveyModelMapperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMapperSpec.swift; sourceTree = "<group>"; };
 		F873CD9F2BCDF2730029844C /* SurveyRepositoryImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepositoryImplSpec.swift; sourceTree = "<group>"; };
 		F876B8512BCCE12B00558DCF /* UserCredentialsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialsSpec.swift; sourceTree = "<group>"; };
+		F87A7FD32BCF856E0060EE32 /* LocalStoreServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreServiceSpec.swift; sourceTree = "<group>"; };
 		F87F19562BCB559C003A2CA6 /* MySurveyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySurveyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySurveyChallengeApp.swift; sourceTree = "<group>"; };
 		F87F195B2BCB559C003A2CA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -483,6 +485,14 @@
 			path = LocalStore;
 			sourceTree = "<group>";
 		};
+		F87A7FD22BCF85320060EE32 /* LocalStore */ = {
+			isa = PBXGroup;
+			children = (
+				F87A7FD32BCF856E0060EE32 /* LocalStoreServiceSpec.swift */,
+			);
+			path = LocalStore;
+			sourceTree = "<group>";
+		};
 		F87F194D2BCB559C003A2CA6 = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +762,7 @@
 				F89B87CF2BCCA1E5005DADF3 /* ModelMappers */,
 				F89B87D42BCCA280005DADF3 /* Repositories */,
 				F87F19FD2BCB9B1D003A2CA6 /* Networking */,
+				F87A7FD22BCF85320060EE32 /* LocalStore */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -1454,6 +1465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87A7FD42BCF856E0060EE32 /* LocalStoreServiceSpec.swift in Sources */,
 				F89B87D62BCCA28D005DADF3 /* LoginRepositoryImplSpec.swift in Sources */,
 				F873CD9E2BCDF2620029844C /* SurveyModelMapperSpec.swift in Sources */,
 				F8CEA4C82BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift in Sources */,
