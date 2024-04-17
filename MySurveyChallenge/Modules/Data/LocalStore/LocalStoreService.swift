@@ -15,10 +15,9 @@ public protocol LocalStoreService {
 
 final class LocalStoreServiceImpl: LocalStoreService {
     func saveDataToCache(_ data: Data, fileName: String) throws {
-        let jsonData = try JSONEncoder().encode(data)
         if let cacheDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first {
             let fileURL = cacheDirectory.appendingPathComponent(fileName)
-            try jsonData.write(to: fileURL)
+            try data.write(to: fileURL)
         }
     }
 
