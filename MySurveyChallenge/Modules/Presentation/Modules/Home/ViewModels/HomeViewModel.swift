@@ -18,6 +18,8 @@ class HomeViewModel: ObservableObject {
     @Published var surveys: [Survey] = []
     @Published var isLoading: Bool = false
     @Published var errorMsg: String?
+    @Published var showAuthenticationAlert: Bool = false
+
     private var didFetchData = false
 
     private let getSurveysUseCase: GetSurveysUseCase
@@ -46,10 +48,15 @@ class HomeViewModel: ObservableObject {
                     self.surveys = surveys
                 case .failure(let error):
                     switch error {
-                    case .networking(_,
+                    case .networking(let statusCode,
                                      let serverError,
                                      _):
-                        self.errorMsg = serverError?.localizedDescription ?? "Something went wrong"
+                        switch statusCode {
+                        case 401:
+                            self.showAuthenticationAlert = true
+                        default:
+                            self.errorMsg = serverError?.localizedDescription ?? "Something went wrong"
+                        }
 
                     case .noInternet:
                         self.errorMsg = "No internet connection. please check your internet settings"
