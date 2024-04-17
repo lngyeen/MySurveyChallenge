@@ -9,13 +9,17 @@ import Foundation
 
 class DataInstanceAssembly: InstanceAssembly {
     func assemble(container: Container) {
+        container.register(LocalStoreService.self) { _ in
+            LocalStoreServiceImpl()
+        }
+
         container.register(LoginRepository.self) { _ in
             LoginRepositoryImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
         }
 
-        container.register(SurveyRepository.self) { _ in
+        container.register(SurveyRepository.self) {
             SurveyRepositoryWithCachingImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic),
-                                            localStoreService: DI.singleton.resolve(LocalStoreService.self)!)
+                                            localStoreService: $0.resolve(LocalStoreService.self)!)
         }
     }
 }

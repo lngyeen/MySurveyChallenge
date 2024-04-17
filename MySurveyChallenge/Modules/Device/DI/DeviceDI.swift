@@ -20,9 +20,5 @@ class DeviceSingletonAssembly: SingletonAssembly {
         container.register(SecureStoreService.self) {
             KeychainStoreService(adapter: $0.resolve(KeychainFrameworkAdapter.self)!)
         }
-
-        container.register(LocalStoreService.self) { _ in
-            LocalStoreServiceImpl()
-        }
     }
 }

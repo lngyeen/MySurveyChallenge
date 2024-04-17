@@ -100,7 +100,6 @@
 		F8CEA4BF2BCF37F1000227AB /* SurveyRepositoryWithCachingImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA4BE2BCF37F1000227AB /* SurveyRepositoryWithCachingImpl.swift */; };
 		F8CEA4C22BCF38EC000227AB /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = F8CEA4C12BCF38EC000227AB /* CachedAsyncImage */; };
 		F8CEA4C42BCF3C30000227AB /* LocalStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA4C32BCF3C30000227AB /* LocalStoreService.swift */; };
-		F8CEA4C62BCF3C5A000227AB /* LocalStoreServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA4C52BCF3C5A000227AB /* LocalStoreServiceImpl.swift */; };
 		F8CEA4C82BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CEA4C72BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift */; };
 /* End PBXBuildFile section */
 
@@ -226,7 +225,6 @@
 		F8A2FE922BCC30D6003AA6BE /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		F8CEA4BE2BCF37F1000227AB /* SurveyRepositoryWithCachingImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepositoryWithCachingImpl.swift; sourceTree = "<group>"; };
 		F8CEA4C32BCF3C30000227AB /* LocalStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreService.swift; sourceTree = "<group>"; };
-		F8CEA4C52BCF3C5A000227AB /* LocalStoreServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreServiceImpl.swift; sourceTree = "<group>"; };
 		F8CEA4C72BCF3E05000227AB /* SurveyRepositoryWithCachingImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepositoryWithCachingImplSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				F82B180C2BCD26D60003FE37 /* SecureStoreService.swift */,
-				F8CEA4C32BCF3C30000227AB /* LocalStoreService.swift */,
 			);
 			path = DeviceServices;
 			sourceTree = "<group>";
@@ -313,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				F82B18142BCD27B20003FE37 /* KeychainStoreService.swift */,
-				F8CEA4C52BCF3C5A000227AB /* LocalStoreServiceImpl.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -479,6 +475,14 @@
 			path = Specs;
 			sourceTree = "<group>";
 		};
+		F87A7FD12BCF6E2C0060EE32 /* LocalStore */ = {
+			isa = PBXGroup;
+			children = (
+				F8CEA4C32BCF3C30000227AB /* LocalStoreService.swift */,
+			);
+			path = LocalStore;
+			sourceTree = "<group>";
+		};
 		F87F194D2BCB559C003A2CA6 = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +640,7 @@
 				F89B87B02BCC9A22005DADF3 /* DTOs */,
 				F89B87B22BCC9A98005DADF3 /* ModelMappers */,
 				F87F19D82BCB88CD003A2CA6 /* Networking */,
+				F87A7FD12BCF6E2C0060EE32 /* LocalStore */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1396,7 +1401,6 @@
 				F89B879A2BCC974D005DADF3 /* AppNetworkError.swift in Sources */,
 				F82B180D2BCD26D60003FE37 /* SecureStoreService.swift in Sources */,
 				F87F19DB2BCB8967003A2CA6 /* NetworkAPIClient.swift in Sources */,
-				F8CEA4C62BCF3C5A000227AB /* LocalStoreServiceImpl.swift in Sources */,
 				F873CD8F2BCDEF7B0029844C /* SurveyRequestEndpoint.swift in Sources */,
 				F87F19E22BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift in Sources */,
 				F89B87A42BCC983D005DADF3 /* UserCredentials.swift in Sources */,
