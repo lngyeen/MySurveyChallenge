@@ -43,14 +43,13 @@ class OAuthAuthenticator: Authenticator {
             .validate()
             .responseCodableJSONAPI(completionHandler: { [authenticationManager]
                 (response: DataResponse<JapxResponse<UserCredentialsDTO>, AFError>) in
-                if let newCredentialsDto = response.value?.data {
-                    let newCredentials = UserCredentialsModelMapper.modelFrom(dto: newCredentialsDto)
+                switch response.result {
+                case .success(let success):
+                    let newCredentials = UserCredentialsModelMapper.modelFrom(dto: success.data)
                     authenticationManager.saveCredentials(newCredentials)
                     completion(.success(newCredentials))
-                } else if let error = response.error {
-                    completion(.failure(error))
-                } else {
-                    completion(.failure(AFError.explicitlyCancelled))
+                case .failure(let failure):
+                    completion(.failure(failure))
                 }
             })
     }
