@@ -12,11 +12,21 @@ enum AppNetworkErrorMapper {
     static func appNetworkErrorFrom(networkAPIError: NetworkAPIError) -> AppNetworkError {
         switch networkAPIError {
         case .networking(let error):
-            return .networking(statusCode: error.statusCode,
-                               serverError: error.backendErrors?.errors.first?.asServerError(),
-                               localizedDescription: error.localizedDescription)
+            switch error.initialError {
+            case .requestAdaptationFailed(let error):
+                return .networking(statusCode: 401,
+                                   serverError: nil,
+                                   localizedDescription: error.localizedDescription)
+
+            default:
+                return .networking(statusCode: error.statusCode,
+                                   serverError: error.backendErrors?.errors.first?.asServerError(),
+                                   localizedDescription: error.localizedDescription)
+            }
+
         case .noInternet:
             return .noInternet
+
         case .other(let string):
             return .other(string)
         }
