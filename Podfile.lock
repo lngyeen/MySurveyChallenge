@@ -38,6 +38,7 @@ PODS:
   - Sourcery/CLI-Only (2.2.2)
   - SwiftUIPager (2.5.0)
   - Swinject (2.8.4)
+  - xcbeautify (0.17.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - Sourcery
   - SwiftUIPager
   - Swinject
+  - xcbeautify
 
 SPEC REPOS:
   trunk:
@@ -69,6 +71,7 @@ SPEC REPOS:
     - Sourcery
     - SwiftUIPager
     - Swinject
+    - xcbeautify
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
@@ -86,7 +89,8 @@ SPEC CHECKSUMS:
   Sourcery: 40610fe0d6edf71c7a2f984c96727fae99b94d08
   SwiftUIPager: b314d8923bef0bde743c904bb74fcc7a05fd3422
   Swinject: 6ba81f58fd769c9fd4b8ceced9e25a9cb137cb3c
+  xcbeautify: 6e2f57af5c3a86d490376d5758030a8dcc201c1b
 
-PODFILE CHECKSUM: 8e97980a9e63849e82378942bb75e06a9932d8eb
+PODFILE CHECKSUM: 67efda0b736f5921180b8057530b91231ef06a3a
 
 COCOAPODS: 1.15.2
