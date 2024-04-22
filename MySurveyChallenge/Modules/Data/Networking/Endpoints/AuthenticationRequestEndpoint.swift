@@ -16,7 +16,7 @@ enum AuthenticationRequestEndpoint: RequestEndpoint {
 
     var method: Alamofire.HTTPMethod { .post }
 
-    var encoding: Alamofire.ParameterEncoding { URLEncoding.httpBody }
+    var encoding: Alamofire.ParameterEncoding { JSONEncoding.default }
 
     var parameters: Parameters? {
         switch self {
