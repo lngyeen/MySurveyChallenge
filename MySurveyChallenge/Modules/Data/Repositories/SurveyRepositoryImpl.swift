@@ -9,19 +9,17 @@ import Combine
 import Foundation
 
 final class SurveyRepositoryImpl: SurveyRepository {
-    private let networkAPIClient: NetworkAPIClient
+    private let dataProvider: SurveyDataProvider
 
-    init(networkAPIClient: NetworkAPIClient) {
-        self.networkAPIClient = networkAPIClient
+    init(dataProvider: SurveyDataProvider) {
+        self.dataProvider = dataProvider
     }
 
     func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<NetworkResponse<[Survey]>, AppNetworkError>, Never> {
-        let configuration = SurveyRequestEndpoint.getSurveys(pageNumber: pageNumber, pageSize: pageSize)
-        return networkAPIClient
-            .performRequest(configuration, for: [SurveyDTO].self)
+        return dataProvider
+            .getSurveys(pageNumber: pageNumber, pageSize: pageSize)
             .map { response in
                 response
-                    .result
                     .map { NetworkResponse(data: $0.data.map { SurveyModelMapper.modelFrom(dto: $0) },
                                            meta: $0.meta?.toNetworkPadingInfo()) }
                     .mapToAppNetworkError()

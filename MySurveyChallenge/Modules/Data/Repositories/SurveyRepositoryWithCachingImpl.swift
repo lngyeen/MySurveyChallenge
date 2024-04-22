@@ -13,28 +13,25 @@ final class SurveyRepositoryWithCachingImpl: SurveyRepository {
         static let cachedSurveysFileName: String = "cachedSurveys.json"
     }
 
-    private let networkAPIClient: NetworkAPIClient
+    private let dataProvider: SurveyDataProvider
     private let localStoreService: LocalStoreService
 
-    init(networkAPIClient: NetworkAPIClient, localStoreService: LocalStoreService) {
-        self.networkAPIClient = networkAPIClient
+    init(dataProvider: SurveyDataProvider, localStoreService: LocalStoreService) {
+        self.dataProvider = dataProvider
         self.localStoreService = localStoreService
     }
 
     func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<NetworkResponse<[Survey]>, AppNetworkError>, Never> {
-        let configuration = SurveyRequestEndpoint.getSurveys(pageNumber: pageNumber, pageSize: pageSize)
-
-        return networkAPIClient
-            .performRequest(configuration, for: [SurveyDTO].self)
+        return dataProvider
+            .getSurveys(pageNumber: pageNumber, pageSize: pageSize)
             .receive(on: DispatchQueue.global(qos: .userInteractive))
             .map { [localStoreService] response -> Result<NetworkResponse<[Survey]>, AppNetworkError> in
-                let result = response.result
-                switch result {
+                switch response {
                 case .success(let surveyDTOs):
                     if let jsonData = try? JSONEncoder().encode(surveyDTOs) {
                         try? localStoreService.saveDataToCache(jsonData, fileName: Constants.cachedSurveysFileName)
                     }
-                    return result
+                    return response
                         .map { NetworkResponse(data: $0.data.map { SurveyModelMapper.modelFrom(dto: $0) },
                                                meta: $0.meta?.toNetworkPadingInfo()) }
                         .mapToAppNetworkError()

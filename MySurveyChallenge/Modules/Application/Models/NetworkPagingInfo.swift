@@ -13,3 +13,7 @@ public struct NetworkPagingInfo {
     let pageSize: Int
     let records: Int
 }
+
+extension NetworkPagingInfo {
+    static let sample = NetworkPagingInfo(page: 1, pages: 10, pageSize: 2, records: 20)
+}

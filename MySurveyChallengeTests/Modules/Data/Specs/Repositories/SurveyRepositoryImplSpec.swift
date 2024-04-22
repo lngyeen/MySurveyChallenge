@@ -16,28 +16,27 @@ final class SurveyRepositoryImplSpec: QuickSpec {
     override class func spec() {
         describe("SurveyRepositoryImpl") {
             var sut: SurveyRepositoryImpl!
-            var networkClient: NetworkJSONAPIClient!
+            var surveyDataProviderMock: SurveyDataProviderMock!
             var cancellables: Set<AnyCancellable> = []
             
             describe("it getSurveys") {
-                beforeEach {}
+                beforeEach {
+                    surveyDataProviderMock = SurveyDataProviderMock()
+                    sut = SurveyRepositoryImpl(dataProvider: surveyDataProviderMock)
+                }
                 
                 afterEach {
-                    HTTPRequestStubber.removeAllStubs()
-                    DI.singleton.resolve(AuthenticationManager.self)!.removeCredentials()
                     cancellables.removeAll()
                 }
                 
                 context("when network request succeeds with data") {
                     beforeEach {
-                        networkClient = NetworkJSONAPIClient()
-                        sut = SurveyRepositoryImpl(networkAPIClient: networkClient)
+                        surveyDataProviderMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultJSONAPIResponseSurveyDTONetworkAPIErrorNeverClosure = { _, _ in
+                            Just(.success(JSONAPIResponse(data: SurveyDTO.samples, meta: nil))).eraseToAnyPublisher()
+                        }
                     }
                     
                     it("it return value as a list of Surveys") {
-                        HTTPRequestStubber.stub(SurveyRequestEndpoint.getSurveys(pageNumber: 1, pageSize: 2))
-                        DI.singleton.resolve(AuthenticationManager.self)!.saveCredentials(UserCredentials.sample)
-                         
                         waitUntil { done in
                             sut.getSurveys(pageNumber: 1, pageSize: 2)
                                 .sink { response in
@@ -56,14 +55,12 @@ final class SurveyRepositoryImplSpec: QuickSpec {
                 
                 context("when network request fails") {
                     beforeEach {
-                        networkClient = NetworkJSONAPIClient()
-                        sut = SurveyRepositoryImpl(networkAPIClient: networkClient)
+                        surveyDataProviderMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultJSONAPIResponseSurveyDTONetworkAPIErrorNeverClosure = { _, _ in
+                            Just(.failure(.noInternet)).eraseToAnyPublisher()
+                        }
                     }
                     
                     it("it return error") {
-                        HTTPRequestStubber.stubError(SurveyRequestEndpoint.getSurveys(pageNumber: 1, pageSize: 2))
-                        DI.singleton.resolve(AuthenticationManager.self)!.saveCredentials(UserCredentials.sample)
-                         
                         waitUntil { done in
                             sut.getSurveys(pageNumber: 1, pageSize: 2)
                                 .sink { response in

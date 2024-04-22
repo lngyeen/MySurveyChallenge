@@ -9,24 +9,17 @@ import Combine
 import Foundation
 
 final class LoginRepositoryImpl: LoginRepository {
-    private let networkAPIClient: NetworkAPIClient
+    private let dataProvider: LoginDataProvider
 
-    init(networkAPIClient: NetworkAPIClient) {
-        self.networkAPIClient = networkAPIClient
+    init(dataProvider: LoginDataProvider) {
+        self.dataProvider = dataProvider
     }
 
     func loginWith(email: String, password: String) -> AnyPublisher<Result<UserCredentials, AppNetworkError>, Never> {
-        let loginDto = LoginDTO(email: email,
-                                password: password,
-                                clientId: Config.current.clientId,
-                                clientSecret: Config.current.clientSecret)
-        let configuration = AuthenticationRequestEndpoint.login(loginDto: loginDto)
-
-        return networkAPIClient
-            .performRequest(configuration, for: UserCredentialsDTO.self)
+        return dataProvider
+            .loginWith(email: email, password: password)
             .map { response in
                 response
-                    .result
                     .map { UserCredentialsModelMapper.modelFrom(dto: $0.data) }
                     .mapToAppNetworkError()
             }
