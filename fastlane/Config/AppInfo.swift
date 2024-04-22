@@ -13,7 +13,8 @@ enum AppInfo {
     static var projectName: String { return "MySurveyChallenge" }
     static let projectPath: String = "./\(projectName).xcodeproj"
     static var workspace: String { return "./\(projectName).xcworkspace" }
-    static var scheme: String { return projectName }
+    static var devScheme: String { return "\(projectName)-Dev" }
+    static var prodScheme: String { return "\(projectName)-Prod" }
 
     static var appleId: String { return "[[APPLE_ID]]" } // Your Apple id (email)
     static var appleTeamId: String { return "[[TEAM_ID]]" } // Your Apple team id

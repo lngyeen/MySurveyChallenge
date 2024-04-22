@@ -15,7 +15,7 @@ class Fastfile: LaneFile {
         desc("Run test")
 
         scan(
-            scheme: .userDefined(AppInfo.scheme),
+            scheme: .userDefined(AppInfo.devScheme),
             devices: .userDefined(AppInfo.testDevices),
             testplan: .userDefined(AppInfo.testplan),
             codeCoverage: .userDefined(true),
@@ -117,7 +117,7 @@ class Fastfile: LaneFile {
 
     private func buildAppStoreVersion() {
         gym(
-            scheme: .userDefined(AppInfo.scheme),
+            scheme: .userDefined(AppInfo.prodScheme),
             clean: .userDefined(true),
             includeSymbols: .userDefined(true),
             exportMethod: .userDefined("appstore"),
