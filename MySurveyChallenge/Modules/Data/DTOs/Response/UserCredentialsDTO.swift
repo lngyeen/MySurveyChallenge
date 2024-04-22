@@ -29,6 +29,13 @@ struct UserCredentialsDTO: JapxCodable {
 }
 
 extension UserCredentialsDTO {
+    static let sample = UserCredentialsDTO(id: "32461",
+                                           type: "token",
+                                           accessToken: "sWVatcRXfkaqZr0ctFRalGAUP68mLirkZqcTfrbJ0bk",
+                                           tokenType: "Bearer",
+                                           expiresIn: 7200,
+                                           refreshToken: "Q26yRCh087reGXycTCzzwUBmmgbe7MRcCV9YfAirH7w",
+                                           createdAt: 1712889598)
     static let json =
         """
         {

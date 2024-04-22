@@ -34,7 +34,7 @@ final class GetSurveysUseCaseImplSpec: QuickSpec {
 
                     beforeEach {
                         surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
-                            Just(.success(NetworkResponse(data: surveys, meta: PagingInfo.sample))).eraseToAnyPublisher()
+                            Just(.success(NetworkResponse(data: surveys, meta: NetworkPagingInfo.sample))).eraseToAnyPublisher()
                         }
                     }
 

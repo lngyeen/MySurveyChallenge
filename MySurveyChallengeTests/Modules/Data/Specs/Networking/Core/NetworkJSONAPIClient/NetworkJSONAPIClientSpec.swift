@@ -41,15 +41,21 @@ final class NetworkJSONAPIClientSpec: QuickSpec {
                                 for: [DummyJSONAPIDTO].self
                             )
                             .sink { response in
-                                expect(response.value?.data.count).to(equal(2))
+                                switch response {
+                                case .success(let success):
+                                    expect(success.data.count).to(equal(2))
 
-                                response.value?.data.forEach { (dto: DummyJSONAPIDTO) in
-                                    expect(dto.title).toNot(beNil())
-                                    expect(dto.description).toNot(beNil())
-                                    expect(dto.coverImageUrl).toNot(beNil())
-                                    expect(dto.surveyType).toNot(beNil())
-                                    expect(dto.createdAt).toNot(beNil())
-                                    expect(dto.activeAt).toNot(beNil())
+                                    success.data.forEach { (dto: DummyJSONAPIDTO) in
+                                        expect(dto.title).toNot(beNil())
+                                        expect(dto.description).toNot(beNil())
+                                        expect(dto.coverImageUrl).toNot(beNil())
+                                        expect(dto.surveyType).toNot(beNil())
+                                        expect(dto.createdAt).toNot(beNil())
+                                        expect(dto.activeAt).toNot(beNil())
+                                    }
+
+                                case .failure:
+                                    fail("Request should success")
                                 }
 
                                 done()
@@ -72,7 +78,14 @@ final class NetworkJSONAPIClientSpec: QuickSpec {
                                 for: [DummyJSONAPIDTO].self
                             )
                             .sink { response in
-                                expect(response.error).toNot(beNil())
+                                switch response {
+                                case .success(let success):
+                                    fail("Request shoould fail")
+
+                                case .failure(let failure):
+                                    break
+                                }
+
                                 done()
                             }
                             .store(in: &cancellables)

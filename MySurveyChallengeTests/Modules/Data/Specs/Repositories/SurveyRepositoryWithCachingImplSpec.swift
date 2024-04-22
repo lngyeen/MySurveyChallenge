@@ -16,26 +16,26 @@ final class SurveyRepositoryWithCachingImplSpec: QuickSpec {
     override class func spec() {
         describe("SurveyRepositoryWithCachingImpl") {
             var sut: SurveyRepositoryWithCachingImpl!
-            var networkClient: NetworkJSONAPIClient!
+            var surveyDataProviderMock: SurveyDataProviderMock!
             var localStoreServiceMock: LocalStoreServiceMock!
             var cancellables: Set<AnyCancellable> = []
 
             beforeEach {
-                networkClient = NetworkJSONAPIClient()
+                surveyDataProviderMock = SurveyDataProviderMock()
                 localStoreServiceMock = LocalStoreServiceMock()
-                sut = SurveyRepositoryWithCachingImpl(networkAPIClient: networkClient, localStoreService: localStoreServiceMock)
+                sut = SurveyRepositoryWithCachingImpl(dataProvider: surveyDataProviderMock, localStoreService: localStoreServiceMock)
             }
 
             afterEach {
-                HTTPRequestStubber.removeAllStubs()
                 cancellables.removeAll()
             }
 
             describe("getSurveys") {
                 context("when network request succeeds with data") {
                     beforeEach {
-                        HTTPRequestStubber.stub(SurveyRequestEndpoint.getSurveys(pageNumber: 1, pageSize: 2))
-                        DI.singleton.resolve(AuthenticationManager.self)!.saveCredentials(UserCredentials.sample)
+                        surveyDataProviderMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultJSONAPIResponseSurveyDTONetworkAPIErrorNeverClosure = { _, _ in
+                            Just(.success(JSONAPIResponse(data: SurveyDTO.samples, meta: nil))).eraseToAnyPublisher()
+                        }
                     }
 
                     it("it return value as a list of Surveys") {
@@ -58,8 +58,9 @@ final class SurveyRepositoryWithCachingImplSpec: QuickSpec {
 
                 context("when network request fails") {
                     beforeEach {
-                        HTTPRequestStubber.stubError(SurveyRequestEndpoint.getSurveys(pageNumber: 1, pageSize: 2))
-                        DI.singleton.resolve(AuthenticationManager.self)!.saveCredentials(UserCredentials.sample)
+                        surveyDataProviderMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultJSONAPIResponseSurveyDTONetworkAPIErrorNeverClosure = { _, _ in
+                            Just(.failure(.noInternet)).eraseToAnyPublisher()
+                        }
                     }
 
                     it("returns cached survey data when cached data exists") {
@@ -74,7 +75,7 @@ final class SurveyRepositoryWithCachingImplSpec: QuickSpec {
                                     switch response {
                                     case .success:
                                         break
-                                    case .failure(let error):
+                                    case .failure:
                                         fail("Expected failure")
                                     }
                                     done()
@@ -95,7 +96,7 @@ final class SurveyRepositoryWithCachingImplSpec: QuickSpec {
                                     switch response {
                                     case .success:
                                         fail("Expected failure")
-                                    case .failure(let error):
+                                    case .failure:
                                         break
                                     }
                                     done()

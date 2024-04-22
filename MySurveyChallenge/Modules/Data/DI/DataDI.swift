@@ -13,12 +13,20 @@ class DataInstanceAssembly: InstanceAssembly {
             LocalStoreServiceImpl()
         }
 
-        container.register(LoginRepository.self) { _ in
-            LoginRepositoryImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
+        container.register(LoginDataProvider.self) { _ in
+            LoginDataProviderImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
         }
 
-        container.register(SurveyRepository.self) { _ in
-            SurveyRepositoryImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
+        container.register(LoginRepository.self) {
+            LoginRepositoryImpl(dataProvider: $0.resolve(LoginDataProvider.self)!)
+        }
+
+        container.register(SurveyDataProvider.self) { _ in
+            SurveyDataProviderImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
+        }
+
+        container.register(SurveyRepository.self) {
+            SurveyRepositoryImpl(dataProvider: $0.resolve(SurveyDataProvider.self)!)
         }
     }
 }

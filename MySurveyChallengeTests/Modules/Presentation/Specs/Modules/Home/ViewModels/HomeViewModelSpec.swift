@@ -37,7 +37,7 @@ final class HomeViewModelSpec: AsyncSpec {
                 context("when fetching surveys successfully") {
                     beforeEach {
                         getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
-                            Just(.success(NetworkResponse(data: [Survey.sample], meta: PagingInfo.sample))).eraseToAnyPublisher()
+                            Just(.success(NetworkResponse(data: [Survey.sample], meta: NetworkPagingInfo.sample))).eraseToAnyPublisher()
                         }
                     }
 
@@ -72,7 +72,7 @@ final class HomeViewModelSpec: AsyncSpec {
                     beforeEach {
                         getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
                             Just(.success(NetworkResponse(data: Survey.samples,
-                                                          meta: PagingInfo(page: 2, pages: 3, pageSize: 4, records: 12)))).eraseToAnyPublisher()
+                                                          meta: NetworkPagingInfo(page: 2, pages: 3, pageSize: 4, records: 12)))).eraseToAnyPublisher()
                         }
 
                         sut.surveys = Survey.samples
@@ -111,7 +111,7 @@ final class HomeViewModelSpec: AsyncSpec {
                     beforeEach {
                         getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
                             Just(.success(NetworkResponse(data: Survey.samples,
-                                                          meta: PagingInfo(page: 2, pages: 2, pageSize: 4, records: 8)))).eraseToAnyPublisher()
+                                                          meta: NetworkPagingInfo(page: 2, pages: 2, pageSize: 4, records: 8)))).eraseToAnyPublisher()
                         }
 
                         sut.surveys = Survey.samples
