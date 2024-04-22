@@ -10,5 +10,5 @@ import Foundation
 
 // sourcery: AutoMockable
 public protocol SurveyRepository {
-    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<[Survey], AppNetworkError>, Never>
+    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<NetworkResponse<[Survey]>, AppNetworkError>, Never>
 }

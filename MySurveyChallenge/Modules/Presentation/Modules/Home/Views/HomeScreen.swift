@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    enum Constants {
+        static let pagesRemainingToLoadMore = Int(3)
+    }
+
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     @StateObject var viewModel: HomeViewModel
@@ -15,7 +19,7 @@ struct HomeScreen: View {
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            if viewModel.isLoading {
+            if viewModel.isLoading, viewModel.surveys.isEmpty {
                 LoadingView()
                     .zIndex(1)
             } else if let errorMsg = viewModel.errorMsg {
@@ -24,11 +28,14 @@ struct HomeScreen: View {
                 }
                 .zIndex(2)
             } else {
-                SurveyListView(surveys: viewModel.surveys)
-                    .zIndex(3)
+                SurveyListView(surveys: viewModel.surveys) { pageIndex in
+                    guard pageIndex >= viewModel.surveys.count - Constants.pagesRemainingToLoadMore else { return }
+                    viewModel.fetchSurveys()
+                }
+                .zIndex(3)
             }
 
-            if !viewModel.isLoading {
+            if !viewModel.isLoading || !viewModel.surveys.isEmpty {
                 logoutButton
                     .zIndex(4)
             }

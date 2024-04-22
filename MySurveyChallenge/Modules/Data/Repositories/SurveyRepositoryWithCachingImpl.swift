@@ -21,13 +21,13 @@ final class SurveyRepositoryWithCachingImpl: SurveyRepository {
         self.localStoreService = localStoreService
     }
 
-    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<[Survey], AppNetworkError>, Never> {
+    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<NetworkResponse<[Survey]>, AppNetworkError>, Never> {
         let configuration = SurveyRequestEndpoint.getSurveys(pageNumber: pageNumber, pageSize: pageSize)
 
         return networkAPIClient
             .performRequest(configuration, for: [SurveyDTO].self)
             .receive(on: DispatchQueue.global(qos: .userInteractive))
-            .map { [localStoreService] response -> Result<[Survey], AppNetworkError> in
+            .map { [localStoreService] response -> Result<NetworkResponse<[Survey]>, AppNetworkError> in
                 let result = response.result
                 switch result {
                 case .success(let surveyDTOs):
@@ -35,7 +35,8 @@ final class SurveyRepositoryWithCachingImpl: SurveyRepository {
                         try? localStoreService.saveDataToCache(jsonData, fileName: Constants.cachedSurveysFileName)
                     }
                     return result
-                        .map { $0.map { SurveyModelMapper.modelFrom(dto: $0) } }
+                        .map { NetworkResponse(data: $0.data.map { SurveyModelMapper.modelFrom(dto: $0) },
+                                               meta: $0.meta?.toNetworkPadingInfo()) }
                         .mapToAppNetworkError()
 
                 case .failure(let error):
@@ -43,7 +44,7 @@ final class SurveyRepositoryWithCachingImpl: SurveyRepository {
                        let cachedSurveys: [SurveyDTO] = try? JSONDecoder().decode([SurveyDTO].self, from: cachedSurveysData)
                     {
                         let surveys = cachedSurveys.map { SurveyModelMapper.modelFrom(dto: $0) }
-                        return .success(surveys)
+                        return .success(NetworkResponse(data: surveys, meta: nil))
                     }
                     return .failure(AppNetworkErrorMapper.appNetworkErrorFrom(networkAPIError: error))
                 }

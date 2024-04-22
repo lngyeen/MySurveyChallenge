@@ -39,7 +39,7 @@ final class NetworkJSONAPIClient: NetworkAPIClient {
     }
 
     func performRequest<T: Codable>(_ configuration: RequestEndpoint,
-                                    for type: T.Type) -> AnyPublisher<DataResponse<T, NetworkAPIError>, Never>
+                                    for type: T.Type) -> AnyPublisher<DataResponse<JSONAPIResponse<T>, NetworkAPIError>, Never>
     {
         return request(session: session,
                        configuration: configuration,
@@ -48,7 +48,7 @@ final class NetworkJSONAPIClient: NetworkAPIClient {
 
     private func request<T: Codable>(session: Session,
                                      configuration: RequestEndpoint,
-                                     decoder: JapxDecoder) -> AnyPublisher<DataResponse<T, NetworkAPIError>, Never>
+                                     decoder: JapxDecoder) -> AnyPublisher<DataResponse<JSONAPIResponse<T>, NetworkAPIError>, Never>
     {
         session.request(
             configuration.url,
@@ -75,7 +75,10 @@ final class NetworkJSONAPIClient: NetworkAPIClient {
         .map { response in
             response
                 .tryMap { data in
-                    try decoder.decode(JapxResponse<T>.self, from: data).data
+                    let japxResponse = try decoder.decode(JapxResponse<T>.self, from: data)
+                    let data = japxResponse.data
+                    let meta = japxResponse.meta
+                    return JSONAPIResponse(data: data, meta: meta)
                 }
         }
         .map { response in

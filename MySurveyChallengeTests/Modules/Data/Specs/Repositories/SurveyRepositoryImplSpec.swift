@@ -42,11 +42,10 @@ final class SurveyRepositoryImplSpec: QuickSpec {
                             sut.getSurveys(pageNumber: 1, pageSize: 2)
                                 .sink { response in
                                     switch response {
-                                    case .success(let success):
-                                        print(success)
-                                    case .failure(let error):
-                                        print(error)
-                                        fail("Get surveys success")
+                                    case .success:
+                                        break
+                                    case .failure:
+                                        fail("Get surveys should success")
                                     }
                                     done()
                                 }
@@ -71,7 +70,8 @@ final class SurveyRepositoryImplSpec: QuickSpec {
                                     switch response {
                                     case .success:
                                         fail("Get surveys should fail")
-                                    case .failure: break
+                                    case .failure:
+                                        break
                                     }
                                     done()
                                 }

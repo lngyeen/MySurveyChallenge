@@ -15,14 +15,15 @@ final class SurveyRepositoryImpl: SurveyRepository {
         self.networkAPIClient = networkAPIClient
     }
 
-    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<[Survey], AppNetworkError>, Never> {
+    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<NetworkResponse<[Survey]>, AppNetworkError>, Never> {
         let configuration = SurveyRequestEndpoint.getSurveys(pageNumber: pageNumber, pageSize: pageSize)
         return networkAPIClient
             .performRequest(configuration, for: [SurveyDTO].self)
             .map { response in
                 response
                     .result
-                    .map { $0.map { SurveyModelMapper.modelFrom(dto: $0) } }
+                    .map { NetworkResponse(data: $0.data.map { SurveyModelMapper.modelFrom(dto: $0) },
+                                           meta: $0.meta?.toNetworkPadingInfo()) }
                     .mapToAppNetworkError()
             }
             .eraseToAnyPublisher()

@@ -10,7 +10,7 @@ import Foundation
 
 // sourcery: AutoMockable
 public protocol GetSurveysUseCase {
-    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<[Survey], AppNetworkError>, Never>
+    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<NetworkResponse<[Survey]>, AppNetworkError>, Never>
 }
 
 final class GetSurveysUseCaseImpl: GetSurveysUseCase {
@@ -20,7 +20,7 @@ final class GetSurveysUseCaseImpl: GetSurveysUseCase {
         self.surveyRepository = surveyRepository
     }
 
-    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<[Survey], AppNetworkError>, Never>
+    func getSurveys(pageNumber: Int, pageSize: Int) -> AnyPublisher<Result<NetworkResponse<[Survey]>, AppNetworkError>, Never>
     {
         return surveyRepository
             .getSurveys(pageNumber: pageNumber, pageSize: pageSize)

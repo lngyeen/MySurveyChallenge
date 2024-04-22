@@ -27,7 +27,7 @@ final class LoginRepositoryImpl: LoginRepository {
             .map { response in
                 response
                     .result
-                    .map { UserCredentialsModelMapper.modelFrom(dto: $0) }
+                    .map { UserCredentialsModelMapper.modelFrom(dto: $0.data) }
                     .mapToAppNetworkError()
             }
             .eraseToAnyPublisher()

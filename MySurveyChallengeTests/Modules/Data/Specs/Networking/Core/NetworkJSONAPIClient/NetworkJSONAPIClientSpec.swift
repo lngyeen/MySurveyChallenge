@@ -41,9 +41,9 @@ final class NetworkJSONAPIClientSpec: QuickSpec {
                                 for: [DummyJSONAPIDTO].self
                             )
                             .sink { response in
-                                expect(response.value?.count).to(equal(2))
+                                expect(response.value?.data.count).to(equal(2))
 
-                                response.value?.forEach { (dto: DummyJSONAPIDTO) in
+                                response.value?.data.forEach { (dto: DummyJSONAPIDTO) in
                                     expect(dto.title).toNot(beNil())
                                     expect(dto.description).toNot(beNil())
                                     expect(dto.coverImageUrl).toNot(beNil())
