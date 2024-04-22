@@ -4,7 +4,39 @@
 
 Hello reviewers,
 
-Welcome to my coding challenge project. Below, I'll provide an overview of the project's architecture, configurations, authentication approach, dependency injection, CI/CD setup, and optional features.
+Welcome to my coding challenge project. Below, I will provide an overview of how to build and run the project, its architecture, configuration, validation methods, dependency injection, CI/CD setup, and optional features.
+
+## Getting Started
+
+To get started with the project, follow these steps:
+
+1. Clone the repository to your local machine:
+
+    ```bash
+    git clone <repository_url>
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd MySurveyChallenge
+    ```
+
+3. Install CocoaPods dependencies:
+
+    ```bash
+    pod install
+    ```
+
+4. Open the project in Xcode:
+
+    ```bash
+    open MySurveyChallenge.xcworkspace
+    ```
+
+5. Build and run the project by selecting the appropriate target and device from the scheme dropdown menu in Xcode, and then clicking the `Run` button.
+
+By following these steps, you should be able to successfully checkout and build the project on your local machine.
 
 ## Architecture
 
