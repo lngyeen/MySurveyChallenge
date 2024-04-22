@@ -131,6 +131,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		144685A01E224BC1D5A5986C /* Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge-MySurveyChallengeUITests/Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-debug.xcconfig"; sourceTree = "<group>"; };
+		1D7FB6E4FEF21DE77B243C7D /* Pods-MySurveyChallenge.prod-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.prod-release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.prod-release.xcconfig"; sourceTree = "<group>"; };
+		207DF875430F50EFF2762F07 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge-MySurveyChallengeUITests/Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-release.xcconfig"; sourceTree = "<group>"; };
+		305C64F2202B6D92051E3A25 /* Pods-MySurveyChallenge.dev-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.dev-release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.dev-release.xcconfig"; sourceTree = "<group>"; };
+		3315FFEAF78D938BA11418A4 /* Pods-MySurveyChallengeTests.dev-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallengeTests.dev-debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallengeTests/Pods-MySurveyChallengeTests.dev-debug.xcconfig"; sourceTree = "<group>"; };
+		405361959B1180CB33A64562 /* Pods-MySurveyChallengeTests.prod-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallengeTests.prod-debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallengeTests/Pods-MySurveyChallengeTests.prod-debug.xcconfig"; sourceTree = "<group>"; };
+		434EDA5E8E88B10A53A68DAE /* Pods-MySurveyChallenge.dev-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.dev-debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.dev-debug.xcconfig"; sourceTree = "<group>"; };
+		4CD7646FFE5220791A462B1E /* Pods-MySurveyChallengeTests.dev-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallengeTests.dev-release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallengeTests/Pods-MySurveyChallengeTests.dev-release.xcconfig"; sourceTree = "<group>"; };
+		5B966D94B0BAB8F4C8775C6E /* Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge-MySurveyChallengeUITests/Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-release.xcconfig"; sourceTree = "<group>"; };
 		5F02FE1D3BBEC5CB40E82691 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge-MySurveyChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge-MySurveyChallengeUITests/Pods-MySurveyChallenge-MySurveyChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		623C900A3A21B1A9B3B7B10C /* Pods-MySurveyChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallengeTests/Pods-MySurveyChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		76312B7B83C582764DA8CF1F /* Pods-MySurveyChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +147,9 @@
 		7BDC9C1E8C5172C29281EAF3 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge-MySurveyChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge-MySurveyChallengeUITests/Pods-MySurveyChallenge-MySurveyChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A43B6AAC0D715D96310CC5E1 /* Pods-MySurveyChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallengeTests/Pods-MySurveyChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5D759E830BF01829BEAEC66 /* Pods-MySurveyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		BA1103FC98E46DD1A4D9699F /* Pods-MySurveyChallenge.prod-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.prod-debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.prod-debug.xcconfig"; sourceTree = "<group>"; };
+		CACF3697C06683C1EC0EAA94 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge-MySurveyChallengeUITests/Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-debug.xcconfig"; sourceTree = "<group>"; };
+		CC27468ABB1D1EBA030EC8E6 /* Pods-MySurveyChallengeTests.prod-release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallengeTests.prod-release.xcconfig"; path = "Target Support Files/Pods-MySurveyChallengeTests/Pods-MySurveyChallengeTests.prod-release.xcconfig"; sourceTree = "<group>"; };
 		D210FBCDF4BB5CFC962656E1 /* Pods_MySurveyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySurveyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySurveyChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81EDC3C2BD612D5001049AD /* JSONAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAPIResponse.swift; sourceTree = "<group>"; };
@@ -175,6 +187,7 @@
 		F8770D262BD643CE00FFC4F6 /* NetworkAPIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIClientMock.swift; sourceTree = "<group>"; };
 		F8770D292BD6445A00FFC4F6 /* LoginDataProviderImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataProviderImplSpec.swift; sourceTree = "<group>"; };
 		F8770D2B2BD645D500FFC4F6 /* SurveyDataProviderImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDataProviderImplSpec.swift; sourceTree = "<group>"; };
+		F8770D2D2BD64E7500FFC4F6 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		F87A7FD32BCF856E0060EE32 /* LocalStoreServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreServiceSpec.swift; sourceTree = "<group>"; };
 		F87F19562BCB559C003A2CA6 /* MySurveyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySurveyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySurveyChallengeApp.swift; sourceTree = "<group>"; };
@@ -286,6 +299,18 @@
 				7BDC9C1E8C5172C29281EAF3 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.release.xcconfig */,
 				A43B6AAC0D715D96310CC5E1 /* Pods-MySurveyChallengeTests.debug.xcconfig */,
 				623C900A3A21B1A9B3B7B10C /* Pods-MySurveyChallengeTests.release.xcconfig */,
+				434EDA5E8E88B10A53A68DAE /* Pods-MySurveyChallenge.dev-debug.xcconfig */,
+				BA1103FC98E46DD1A4D9699F /* Pods-MySurveyChallenge.prod-debug.xcconfig */,
+				305C64F2202B6D92051E3A25 /* Pods-MySurveyChallenge.dev-release.xcconfig */,
+				1D7FB6E4FEF21DE77B243C7D /* Pods-MySurveyChallenge.prod-release.xcconfig */,
+				CACF3697C06683C1EC0EAA94 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-debug.xcconfig */,
+				144685A01E224BC1D5A5986C /* Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-debug.xcconfig */,
+				5B966D94B0BAB8F4C8775C6E /* Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-release.xcconfig */,
+				207DF875430F50EFF2762F07 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-release.xcconfig */,
+				3315FFEAF78D938BA11418A4 /* Pods-MySurveyChallengeTests.dev-debug.xcconfig */,
+				405361959B1180CB33A64562 /* Pods-MySurveyChallengeTests.prod-debug.xcconfig */,
+				4CD7646FFE5220791A462B1E /* Pods-MySurveyChallengeTests.dev-release.xcconfig */,
+				CC27468ABB1D1EBA030EC8E6 /* Pods-MySurveyChallengeTests.prod-release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -603,6 +628,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F19862BCB6A1D003A2CA6 /* Info.plist */,
+				F8770D2D2BD64E7500FFC4F6 /* Development.xcconfig */,
 				F87F19852BCB69C2003A2CA6 /* Production.xcconfig */,
 			);
 			path = Configurations;
@@ -1577,7 +1603,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F87F19782BCB559E003A2CA6 /* Debug */ = {
+		F8770D322BD64FC800FFC4F6 /* Prod-Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F87F19852BCB69C2003A2CA6 /* Production.xcconfig */;
 			buildSettings = {
@@ -1639,9 +1665,91 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Prod-Debug";
 		};
-		F87F19792BCB559E003A2CA6 /* Release */ = {
+		F8770D332BD64FC800FFC4F6 /* Prod-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA1103FC98E46DD1A4D9699F /* Pods-MySurveyChallenge.prod-debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MySurveyChallenge/Preview Content\"";
+				DEVELOPMENT_TEAM = 493KGFEVC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySurveyChallenge/Configurations/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Prod-Debug";
+		};
+		F8770D342BD64FC800FFC4F6 /* Prod-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 405361959B1180CB33A64562 /* Pods-MySurveyChallengeTests.prod-debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6P62CCW5K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.luunguyen.MySurveyChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySurveyChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MySurveyChallenge";
+			};
+			name = "Prod-Debug";
+		};
+		F8770D352BD64FC800FFC4F6 /* Prod-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 144685A01E224BC1D5A5986C /* Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6P62CCW5K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.luunguyen.MySurveyChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MySurveyChallenge;
+			};
+			name = "Prod-Debug";
+		};
+		F8770D362BD64FD300FFC4F6 /* Prod-Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F87F19852BCB69C2003A2CA6 /* Production.xcconfig */;
 			buildSettings = {
@@ -1696,11 +1804,11 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Prod-Release";
 		};
-		F87F197B2BCB559E003A2CA6 /* Debug */ = {
+		F8770D372BD64FD300FFC4F6 /* Prod-Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5D759E830BF01829BEAEC66 /* Pods-MySurveyChallenge.debug.xcconfig */;
+			baseConfigurationReference = 1D7FB6E4FEF21DE77B243C7D /* Pods-MySurveyChallenge.prod-release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1721,7 +1829,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.luunguyen.MySurveyChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1731,11 +1838,180 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = "Prod-Release";
 		};
-		F87F197C2BCB559E003A2CA6 /* Release */ = {
+		F8770D382BD64FD300FFC4F6 /* Prod-Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76312B7B83C582764DA8CF1F /* Pods-MySurveyChallenge.release.xcconfig */;
+			baseConfigurationReference = CC27468ABB1D1EBA030EC8E6 /* Pods-MySurveyChallengeTests.prod-release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6P62CCW5K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.luunguyen.MySurveyChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySurveyChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MySurveyChallenge";
+			};
+			name = "Prod-Release";
+		};
+		F8770D392BD64FD300FFC4F6 /* Prod-Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 207DF875430F50EFF2762F07 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.prod-release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6P62CCW5K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.luunguyen.MySurveyChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MySurveyChallenge;
+			};
+			name = "Prod-Release";
+		};
+		F87F19782BCB559E003A2CA6 /* Dev-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8770D2D2BD64E7500FFC4F6 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Dev-Debug";
+		};
+		F87F19792BCB559E003A2CA6 /* Dev-Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8770D2D2BD64E7500FFC4F6 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Dev-Release";
+		};
+		F87F197B2BCB559E003A2CA6 /* Dev-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 434EDA5E8E88B10A53A68DAE /* Pods-MySurveyChallenge.dev-debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1756,7 +2032,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.luunguyen.MySurveyChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1766,11 +2041,45 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = "Dev-Debug";
 		};
-		F87F197E2BCB559E003A2CA6 /* Debug */ = {
+		F87F197C2BCB559E003A2CA6 /* Dev-Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A43B6AAC0D715D96310CC5E1 /* Pods-MySurveyChallengeTests.debug.xcconfig */;
+			baseConfigurationReference = 305C64F2202B6D92051E3A25 /* Pods-MySurveyChallenge.dev-release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MySurveyChallenge/Preview Content\"";
+				DEVELOPMENT_TEAM = 493KGFEVC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MySurveyChallenge/Configurations/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Dev-Release";
+		};
+		F87F197E2BCB559E003A2CA6 /* Dev-Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3315FFEAF78D938BA11418A4 /* Pods-MySurveyChallengeTests.dev-debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1791,11 +2100,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySurveyChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MySurveyChallenge";
 			};
-			name = Debug;
+			name = "Dev-Debug";
 		};
-		F87F197F2BCB559E003A2CA6 /* Release */ = {
+		F87F197F2BCB559E003A2CA6 /* Dev-Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 623C900A3A21B1A9B3B7B10C /* Pods-MySurveyChallengeTests.release.xcconfig */;
+			baseConfigurationReference = 4CD7646FFE5220791A462B1E /* Pods-MySurveyChallengeTests.dev-release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1816,11 +2125,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySurveyChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MySurveyChallenge";
 			};
-			name = Release;
+			name = "Dev-Release";
 		};
-		F87F19812BCB559E003A2CA6 /* Debug */ = {
+		F87F19812BCB559E003A2CA6 /* Dev-Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F02FE1D3BBEC5CB40E82691 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.debug.xcconfig */;
+			baseConfigurationReference = CACF3697C06683C1EC0EAA94 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1839,11 +2148,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MySurveyChallenge;
 			};
-			name = Debug;
+			name = "Dev-Debug";
 		};
-		F87F19822BCB559E003A2CA6 /* Release */ = {
+		F87F19822BCB559E003A2CA6 /* Dev-Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BDC9C1E8C5172C29281EAF3 /* Pods-MySurveyChallenge-MySurveyChallengeUITests.release.xcconfig */;
+			baseConfigurationReference = 5B966D94B0BAB8F4C8775C6E /* Pods-MySurveyChallenge-MySurveyChallengeUITests.dev-release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1862,7 +2171,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MySurveyChallenge;
 			};
-			name = Release;
+			name = "Dev-Release";
 		};
 /* End XCBuildConfiguration section */
 
@@ -1870,38 +2179,46 @@
 		F87F19512BCB559C003A2CA6 /* Build configuration list for PBXProject "MySurveyChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F87F19782BCB559E003A2CA6 /* Debug */,
-				F87F19792BCB559E003A2CA6 /* Release */,
+				F87F19782BCB559E003A2CA6 /* Dev-Debug */,
+				F8770D322BD64FC800FFC4F6 /* Prod-Debug */,
+				F87F19792BCB559E003A2CA6 /* Dev-Release */,
+				F8770D362BD64FD300FFC4F6 /* Prod-Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Dev-Release";
 		};
 		F87F197A2BCB559E003A2CA6 /* Build configuration list for PBXNativeTarget "MySurveyChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F87F197B2BCB559E003A2CA6 /* Debug */,
-				F87F197C2BCB559E003A2CA6 /* Release */,
+				F87F197B2BCB559E003A2CA6 /* Dev-Debug */,
+				F8770D332BD64FC800FFC4F6 /* Prod-Debug */,
+				F87F197C2BCB559E003A2CA6 /* Dev-Release */,
+				F8770D372BD64FD300FFC4F6 /* Prod-Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Dev-Release";
 		};
 		F87F197D2BCB559E003A2CA6 /* Build configuration list for PBXNativeTarget "MySurveyChallengeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F87F197E2BCB559E003A2CA6 /* Debug */,
-				F87F197F2BCB559E003A2CA6 /* Release */,
+				F87F197E2BCB559E003A2CA6 /* Dev-Debug */,
+				F8770D342BD64FC800FFC4F6 /* Prod-Debug */,
+				F87F197F2BCB559E003A2CA6 /* Dev-Release */,
+				F8770D382BD64FD300FFC4F6 /* Prod-Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Dev-Release";
 		};
 		F87F19802BCB559E003A2CA6 /* Build configuration list for PBXNativeTarget "MySurveyChallengeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F87F19812BCB559E003A2CA6 /* Debug */,
-				F87F19822BCB559E003A2CA6 /* Release */,
+				F87F19812BCB559E003A2CA6 /* Dev-Debug */,
+				F8770D352BD64FC800FFC4F6 /* Prod-Debug */,
+				F87F19822BCB559E003A2CA6 /* Dev-Release */,
+				F8770D392BD64FD300FFC4F6 /* Prod-Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Dev-Release";
 		};
 /* End XCConfigurationList section */
 
