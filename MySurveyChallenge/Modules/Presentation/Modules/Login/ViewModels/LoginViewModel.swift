@@ -44,7 +44,11 @@ class LoginViewModel: ObservableObject {
                 !username.isEmpty && !password.isEmpty
             }
             .receive(on: DispatchQueue.main)
-            .assign(to: \.loginButtonEnabled, on: self)
+            .sink { [weak self] value in
+                guard let self = self else { return }
+
+                self.loginButtonEnabled = value
+            }
             .store(in: &cancellables)
     }
 
@@ -72,7 +76,9 @@ class LoginViewModel: ObservableObject {
         loginErrorMsg = nil
 
         loginUseCase.loginWith(email: username, password: password)
-            .sink(receiveValue: { result in
+            .sink(receiveValue: { [weak self] result in
+                guard let self = self else { return }
+
                 self.isLoggingIn = false
                 switch result {
                 case .success:

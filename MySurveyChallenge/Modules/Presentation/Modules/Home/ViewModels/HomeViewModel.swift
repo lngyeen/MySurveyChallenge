@@ -44,7 +44,9 @@ class HomeViewModel: ObservableObject {
         errorMsg = nil
 
         getSurveysUseCase.getSurveys(pageNumber: currentPage, pageSize: Constants.pageSize)
-            .sink { result in
+            .sink { [weak self] result in
+                guard let self = self else { return }
+
                 switch result {
                 case .success(let response):
                     self.handleResponse(response)
