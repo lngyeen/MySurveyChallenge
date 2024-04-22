@@ -10,33 +10,42 @@ Welcome to my coding challenge project. Below, I will provide an overview of how
 
 To get started with the project, follow these steps:
 
-1. Clone the repository to your local machine:
+1. **Install Ruby and Bundler**:
+    - Install Ruby:
+        - Using RVM: https://rvm.io/
+        - Using Homebrew: https://brew.sh/
 
+    - After installing Ruby, install Bundler:
+        ```bash
+        gem install bundler
+        ```
+
+2. **Clone the repository to your local machine**:
     ```bash
     git clone <repository_url>
     ```
 
-2. Navigate to the project directory:
-
+3. **Navigate to the project directory**:
     ```bash
     cd MySurveyChallenge
     ```
 
-3. Install CocoaPods dependencies:
-
+4. **Install dependencies**:
     ```bash
-    pod install
+    bundle install
+    bundle exec pod install
     ```
 
-4. Open the project in Xcode:
-
+5. **Open the project in Xcode**:
     ```bash
     open MySurveyChallenge.xcworkspace
     ```
 
-5. Build and run the project by selecting the appropriate target and device from the scheme dropdown menu in Xcode, and then clicking the `Run` button.
+6. **Build and run the project**:
+    - Select the appropriate target and device from the scheme dropdown menu in Xcode.
+    - Click the `Run` button to build and run the project.
 
-By following these steps, you should be able to successfully checkout and build the project on your local machine.
+By following these steps, you should be able to successfully checkout, install dependencies, and build the project on your local machine.
 
 ## Architecture
 
