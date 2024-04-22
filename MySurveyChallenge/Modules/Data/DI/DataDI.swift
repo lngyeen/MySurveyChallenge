@@ -17,9 +17,8 @@ class DataInstanceAssembly: InstanceAssembly {
             LoginRepositoryImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
         }
 
-        container.register(SurveyRepository.self) {
-            SurveyRepositoryWithCachingImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic),
-                                            localStoreService: $0.resolve(LocalStoreService.self)!)
+        container.register(SurveyRepository.self) { _ in
+            SurveyRepositoryImpl(networkAPIClient: NetworkAPIClientProvider.clientForType(.basic))
         }
     }
 }

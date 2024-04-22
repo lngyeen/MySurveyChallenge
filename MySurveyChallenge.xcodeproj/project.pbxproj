@@ -10,6 +10,9 @@
 		4B43AF72562EDCFB25EE9F57 /* Pods_MySurveyChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */; };
 		7AEE53369D4DA94C5E36BA1E /* Pods_MySurveyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D210FBCDF4BB5CFC962656E1 /* Pods_MySurveyChallenge.framework */; };
 		E535931C1EA92C827AA11AF9 /* Pods_MySurveyChallenge_MySurveyChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8572ACF8CB435BCBE47E38 /* Pods_MySurveyChallenge_MySurveyChallengeUITests.framework */; };
+		F81EDC3D2BD612D5001049AD /* JSONAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81EDC3C2BD612D5001049AD /* JSONAPIResponse.swift */; };
+		F81EDC3F2BD613E4001049AD /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81EDC3E2BD613E4001049AD /* NetworkResponse.swift */; };
+		F81EDC412BD61617001049AD /* PagingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81EDC402BD61617001049AD /* PagingInfo.swift */; };
 		F82B180D2BCD26D60003FE37 /* SecureStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B180C2BCD26D60003FE37 /* SecureStoreService.swift */; };
 		F82B18132BCD27A30003FE37 /* DeviceDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B18122BCD27A30003FE37 /* DeviceDI.swift */; };
 		F82B18152BCD27B20003FE37 /* KeychainStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B18142BCD27B20003FE37 /* KeychainStoreService.swift */; };
@@ -36,6 +39,7 @@
 		F873CD9E2BCDF2620029844C /* SurveyModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD9D2BCDF2620029844C /* SurveyModelMapperSpec.swift */; };
 		F873CDA02BCDF2730029844C /* SurveyRepositoryImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873CD9F2BCDF2730029844C /* SurveyRepositoryImplSpec.swift */; };
 		F876B8522BCCE12B00558DCF /* UserCredentialsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F876B8512BCCE12B00558DCF /* UserCredentialsSpec.swift */; };
+		F8770D1F2BD633CF00FFC4F6 /* NetworkPagingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8770D1E2BD633CF00FFC4F6 /* NetworkPagingInfo.swift */; };
 		F87A7FD42BCF856E0060EE32 /* LocalStoreServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87A7FD32BCF856E0060EE32 /* LocalStoreServiceSpec.swift */; };
 		F87F195A2BCB559C003A2CA6 /* MySurveyChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */; };
 		F87F195C2BCB559C003A2CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F195B2BCB559C003A2CA6 /* ContentView.swift */; };
@@ -131,6 +135,9 @@
 		A5D759E830BF01829BEAEC66 /* Pods-MySurveyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySurveyChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MySurveyChallenge/Pods-MySurveyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		D210FBCDF4BB5CFC962656E1 /* Pods_MySurveyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySurveyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF7F949C989223EFCB5406 /* Pods_MySurveyChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySurveyChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81EDC3C2BD612D5001049AD /* JSONAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAPIResponse.swift; sourceTree = "<group>"; };
+		F81EDC3E2BD613E4001049AD /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		F81EDC402BD61617001049AD /* PagingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingInfo.swift; sourceTree = "<group>"; };
 		F82B180C2BCD26D60003FE37 /* SecureStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreService.swift; sourceTree = "<group>"; };
 		F82B18122BCD27A30003FE37 /* DeviceDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDI.swift; sourceTree = "<group>"; };
 		F82B18142BCD27B20003FE37 /* KeychainStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreService.swift; sourceTree = "<group>"; };
@@ -157,6 +164,7 @@
 		F873CD9D2BCDF2620029844C /* SurveyModelMapperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModelMapperSpec.swift; sourceTree = "<group>"; };
 		F873CD9F2BCDF2730029844C /* SurveyRepositoryImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepositoryImplSpec.swift; sourceTree = "<group>"; };
 		F876B8512BCCE12B00558DCF /* UserCredentialsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialsSpec.swift; sourceTree = "<group>"; };
+		F8770D1E2BD633CF00FFC4F6 /* NetworkPagingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPagingInfo.swift; sourceTree = "<group>"; };
 		F87A7FD32BCF856E0060EE32 /* LocalStoreServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoreServiceSpec.swift; sourceTree = "<group>"; };
 		F87F19562BCB559C003A2CA6 /* MySurveyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySurveyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F19592BCB559C003A2CA6 /* MySurveyChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySurveyChallengeApp.swift; sourceTree = "<group>"; };
@@ -682,6 +690,8 @@
 				F87F19E62BCB90B2003A2CA6 /* NetworkAPIClientFactory.swift */,
 				F87F19EC2BCB915A003A2CA6 /* NetworkAPIClientProvider.swift */,
 				F87F19E32BCB9026003A2CA6 /* JapxResponse.swift */,
+				F81EDC402BD61617001049AD /* PagingInfo.swift */,
+				F81EDC3C2BD612D5001049AD /* JSONAPIResponse.swift */,
 			);
 			path = NetworkJSONAPIClient;
 			sourceTree = "<group>";
@@ -890,6 +900,8 @@
 			children = (
 				F89B87992BCC974D005DADF3 /* AppNetworkError.swift */,
 				F89B87A32BCC983D005DADF3 /* UserCredentials.swift */,
+				F81EDC3E2BD613E4001049AD /* NetworkResponse.swift */,
+				F8770D1E2BD633CF00FFC4F6 /* NetworkPagingInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1405,6 +1417,7 @@
 				F873CD972BCDF1550029844C /* RefreshTokenDTO.swift in Sources */,
 				F881C2402BCD7B92009B7A7A /* SurveyUIModelMapper.swift in Sources */,
 				F881C2452BCD7C09009B7A7A /* Survey.swift in Sources */,
+				F8770D1F2BD633CF00FFC4F6 /* NetworkPagingInfo.swift in Sources */,
 				F87F19EB2BCB911C003A2CA6 /* ConsoleLogEventMonitor.swift in Sources */,
 				F89B878C2BCC92CE005DADF3 /* DI.swift in Sources */,
 				F89B879C2BCC9766005DADF3 /* LoginUseCase.swift in Sources */,
@@ -1416,6 +1429,8 @@
 				F87F19DB2BCB8967003A2CA6 /* NetworkAPIClient.swift in Sources */,
 				F873CD8F2BCDEF7B0029844C /* SurveyRequestEndpoint.swift in Sources */,
 				F87F19E22BCB8FB6003A2CA6 /* NetworkJSONAPIClient.swift in Sources */,
+				F81EDC412BD61617001049AD /* PagingInfo.swift in Sources */,
+				F81EDC3D2BD612D5001049AD /* JSONAPIResponse.swift in Sources */,
 				F89B87A42BCC983D005DADF3 /* UserCredentials.swift in Sources */,
 				F82B18172BCD27D80003FE37 /* KeychainFrameworkAdapter.swift in Sources */,
 				F89B87C72BCCA0DD005DADF3 /* AutoGeneratedEquatables.swift in Sources */,
@@ -1447,6 +1462,7 @@
 				F86EDD032BCBE171004E98C6 /* View+.swift in Sources */,
 				F87F19E42BCB9026003A2CA6 /* JapxResponse.swift in Sources */,
 				F82B18132BCD27A30003FE37 /* DeviceDI.swift in Sources */,
+				F81EDC3F2BD613E4001049AD /* NetworkResponse.swift in Sources */,
 				F873CD8D2BCDEF550029844C /* SurveyRepositoryImpl.swift in Sources */,
 				F873CD892BCDEF1E0029844C /* GetSurveysUseCase.swift in Sources */,
 				F89B87AF2BCC99FF005DADF3 /* LoginRepositoryImpl.swift in Sources */,

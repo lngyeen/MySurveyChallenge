@@ -10,6 +10,7 @@ import SwiftUIPager
 
 struct SurveyListView: View {
     let surveys: [Survey]
+    let onPageChanged: ((Int) -> Void)?
 
     @StateObject var page: Page = .first()
     @State var routeToDetailScreen: Bool?
@@ -41,6 +42,7 @@ struct SurveyListView: View {
                                               bottom: geometry.safeAreaInsets.bottom,
                                               trailing: 0))
                   })
+                .onPageChanged(onPageChanged)
                 .ignoresSafeArea()
         }
     }
@@ -48,6 +50,7 @@ struct SurveyListView: View {
     private var pageControlView: some View {
         PageControlView(currentPage: $page.index,
                         numberOfPages: surveys.count)
+
             .padding(.leading, -14)
             .padding(.bottom, 174)
             .ignoresSafeArea()
@@ -76,6 +79,6 @@ struct SurveyListView: View {
 
 #Preview {
     NavigationView {
-        SurveyListView(surveys: Survey.samples)
+        SurveyListView(surveys: Survey.samples) { _ in }
     }
 }

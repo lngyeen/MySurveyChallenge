@@ -33,8 +33,8 @@ final class GetSurveysUseCaseImplSpec: QuickSpec {
                     let surveys = [Survey.sample]
 
                     beforeEach {
-                        surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverClosure = { _, _ in
-                            Just(.success(surveys)).eraseToAnyPublisher()
+                        surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
+                            Just(.success(NetworkResponse(data: surveys, meta: PagingInfo.sample))).eraseToAnyPublisher()
                         }
                     }
 
@@ -43,20 +43,21 @@ final class GetSurveysUseCaseImplSpec: QuickSpec {
                             .sink { result in
                                 switch result {
                                 case .success(let receivedSurveys):
-                                    expect(receivedSurveys).to(equal(surveys))
+                                    expect(receivedSurveys.data).to(equal(surveys))
+                                    expect(receivedSurveys.meta).toNot(beNil())
                                 case .failure:
                                     fail("Retrieving surveys should be successful")
                                 }
                             }
                             .store(in: &cancellables)
 
-                        expect(surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverCalled).to(beTrue())
+                        expect(surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverCalled).to(beTrue())
                     }
                 }
 
                 context("when retrieving surveys fails") {
                     beforeEach {
-                        surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverClosure = { _, _ in
+                        surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
                             Just(.failure(.networking(statusCode: nil, serverError: nil, localizedDescription: nil))).eraseToAnyPublisher()
                         }
                     }
@@ -73,7 +74,7 @@ final class GetSurveysUseCaseImplSpec: QuickSpec {
                             }
                             .store(in: &cancellables)
 
-                        expect(surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverCalled).to(beTrue())
+                        expect(surveyRepositoryMock.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverCalled).to(beTrue())
                     }
                 }
             }

@@ -13,5 +13,5 @@ protocol NetworkAPIClient {
     func performRequest<T: Codable>(
         _ configuration: RequestEndpoint,
         for type: T.Type
-    ) -> AnyPublisher<DataResponse<T, NetworkAPIError>, Never>
+    ) -> AnyPublisher<DataResponse<JSONAPIResponse<T>, NetworkAPIError>, Never>
 }

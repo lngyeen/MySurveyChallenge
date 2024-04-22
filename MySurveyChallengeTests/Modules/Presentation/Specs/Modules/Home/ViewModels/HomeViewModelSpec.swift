@@ -36,8 +36,8 @@ final class HomeViewModelSpec: AsyncSpec {
             describe("fetchSurveys") {
                 context("when fetching surveys successfully") {
                     beforeEach {
-                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverClosure = { _, _ in
-                            Just(.success([Survey.sample])).eraseToAnyPublisher()
+                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
+                            Just(.success(NetworkResponse(data: [Survey.sample], meta: PagingInfo.sample))).eraseToAnyPublisher()
                         }
                     }
 
@@ -68,9 +68,164 @@ final class HomeViewModelSpec: AsyncSpec {
                     }
                 }
 
+                context("when fetching more surveys in the middle page successfully") {
+                    beforeEach {
+                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
+                            Just(.success(NetworkResponse(data: Survey.samples,
+                                                          meta: PagingInfo(page: 2, pages: 3, pageSize: 4, records: 12)))).eraseToAnyPublisher()
+                        }
+
+                        sut.surveys = Survey.samples
+                        sut.isLoading = false
+                        sut.errorMsg = nil
+                    }
+
+                    it("should append new surveys to existing ones") {
+                        sut.fetchSurveys()
+
+                        await waitUntil { done in
+                            sut.$surveys
+                                .sink { value in
+                                    expect(value.count).to(equal(Survey.samples.count * 2))
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+                    }
+
+                    it("should stop show loading indicator") {
+                        sut.fetchSurveys()
+
+                        await waitUntil { done in
+                            sut.$isLoading
+                                .sink { value in
+                                    expect(value).to(beFalse())
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+                    }
+                }
+
+                context("when fetching more surveys in the last page successfully") {
+                    beforeEach {
+                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
+                            Just(.success(NetworkResponse(data: Survey.samples,
+                                                          meta: PagingInfo(page: 2, pages: 2, pageSize: 4, records: 8)))).eraseToAnyPublisher()
+                        }
+
+                        sut.surveys = Survey.samples
+                        sut.isLoading = false
+                        sut.errorMsg = nil
+                    }
+
+                    it("should append new surveys to existing ones") {
+                        sut.fetchSurveys()
+
+                        await waitUntil { done in
+                            sut.$surveys
+                                .sink { value in
+                                    expect(value.count).to(equal(Survey.samples.count * 2))
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+                    }
+
+                    it("should stop show loading indicator") {
+                        sut.fetchSurveys()
+
+                        await waitUntil { done in
+                            sut.$isLoading
+                                .sink { value in
+                                    expect(value).to(beFalse())
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+                    }
+
+                    it("should stop load next pages") {
+                        sut.fetchSurveys()
+
+                        await waitUntil { done in
+                            sut.$surveys
+                                .sink { value in
+                                    expect(value.count).to(equal(Survey.samples.count * 2))
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+
+                        expect(getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverCallsCount).to(equal(1))
+
+                        sut.fetchSurveys()
+
+                        expect(getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverCallsCount).to(equal(1))
+                    }
+                }
+
+                context("when fetching more surveys successfully but has no meta info") {
+                    beforeEach {
+                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
+                            Just(.success(NetworkResponse(data: Survey.samples,
+                                                          meta: nil))).eraseToAnyPublisher()
+                        }
+
+                        sut.surveys = Survey.samples
+                        sut.isLoading = false
+                        sut.errorMsg = nil
+                    }
+
+                    it("should append new surveys to existing ones") {
+                        sut.fetchSurveys()
+
+                        await waitUntil { done in
+                            sut.$surveys
+                                .sink { value in
+                                    expect(value.count).to(equal(Survey.samples.count * 2))
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+                    }
+
+                    it("should stop show loading indicator") {
+                        sut.fetchSurveys()
+
+                        await waitUntil { done in
+                            sut.$isLoading
+                                .sink { value in
+                                    expect(value).to(beFalse())
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+                    }
+
+                    it("should stop load next pages") {
+                        sut.fetchSurveys()
+
+                        await waitUntil { done in
+                            sut.$surveys
+                                .sink { value in
+                                    expect(value.count).to(equal(Survey.samples.count * 2))
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                        }
+
+                        expect(getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverCallsCount).to(equal(1))
+
+                        sut.fetchSurveys()
+
+                        expect(getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverCallsCount).to(equal(1))
+                    }
+                }
+
                 context("when fetching surveys fails with no internet error") {
                     beforeEach {
-                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverClosure = { _, _ in
+                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
                             Just(.failure(.noInternet)).eraseToAnyPublisher()
                         }
                     }
@@ -104,7 +259,7 @@ final class HomeViewModelSpec: AsyncSpec {
 
                 context("when fetching surveys fails with other error") {
                     beforeEach {
-                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverClosure = { _, _ in
+                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
                             Just(.failure(.other(""))).eraseToAnyPublisher()
                         }
                     }
@@ -138,7 +293,7 @@ final class HomeViewModelSpec: AsyncSpec {
 
                 context("when fetching surveys fails with networking error") {
                     beforeEach {
-                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverClosure = { _, _ in
+                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
                             Just(.failure(.networking(statusCode: nil,
                                                       serverError: nil,
                                                       localizedDescription: nil))).eraseToAnyPublisher()
@@ -172,20 +327,22 @@ final class HomeViewModelSpec: AsyncSpec {
                     }
                 }
 
-                context("when fetching surveys fails with other error") {
+                context("when fetching surveys fails with networking error that has 401 status code") {
                     beforeEach {
-                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultSurveyAppNetworkErrorNeverClosure = { _, _ in
-                            Just(.failure(.other(""))).eraseToAnyPublisher()
+                        getSurveysUseCase.getSurveysPageNumberIntPageSizeIntAnyPublisherResultNetworkResponseSurveyAppNetworkErrorNeverClosure = { _, _ in
+                            Just(.failure(.networking(statusCode: 401,
+                                                      serverError: nil,
+                                                      localizedDescription: nil))).eraseToAnyPublisher()
                         }
                     }
 
-                    it("should set errorMsg") {
+                    it("should set showAuthenticationAlert") {
                         sut.fetchSurveys()
 
                         await waitUntil { done in
-                            sut.$errorMsg
+                            sut.$showAuthenticationAlert
                                 .sink { value in
-                                    expect(value).to(equal("Something went wrong"))
+                                    expect(value).to(beTrue())
                                     done()
                                 }
                                 .store(in: &cancellables)

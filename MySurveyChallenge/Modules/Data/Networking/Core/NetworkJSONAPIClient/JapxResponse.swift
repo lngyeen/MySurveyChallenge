@@ -9,4 +9,5 @@ import Foundation
 
 struct JapxResponse<T: Codable>: Codable {
     let data: T
+    let meta: PagingInfo?
 }
