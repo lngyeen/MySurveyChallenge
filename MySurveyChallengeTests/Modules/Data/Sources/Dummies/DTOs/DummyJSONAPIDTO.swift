@@ -34,6 +34,26 @@ extension DummyJSONAPIDTO {
     static let json =
         """
         {
+            "data": {
+                    "id": "d5de6a8f8f5f1cfe51bc",
+                    "type": "survey_simple",
+                    "attributes": {
+                        "title": "Scarlett Bangkok",
+                        "description": "We'd love ot hear from you!",
+                        "is_active": true,
+                        "cover_image_url": "https://ucarecdn.com/62886578-df8b-4f65-902e-8e88d97748b8/-/quality/smart_retina/-/format/auto/",
+                        "created_at": "2017-01-23T07:48:12.991Z",
+                        "active_at": "2015-10-08T07:04:00.000Z",
+                        "inactive_at": null,
+                        "survey_type": "Restaurant"
+                    }
+                }
+        }
+        """
+
+    static let jsonList =
+        """
+        {
             "data": [
                 {
                     "id": "d5de6a8f8f5f1cfe51bc",

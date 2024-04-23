@@ -28,10 +28,10 @@ final class NetworkJSONAPIClientSpec: QuickSpec {
                     HTTPRequestStubber.removeAllStubs()
                 }
 
-                context("when network return value") {
+                context("when network return list of value") {
                     beforeEach {
                         requestEndpoint = DummyRequestEndpoint.test
-                        HTTPRequestStubber.stub(requestEndpoint)
+                        HTTPRequestStubber.stub(requestEndpoint, data: DummyJSONAPIDTO.jsonList.data)
                     }
 
                     it("it return list of DummyJSONAPIDTO") {
@@ -65,6 +65,145 @@ final class NetworkJSONAPIClientSpec: QuickSpec {
                     }
                 }
 
+                context("when network return single value") {
+                    beforeEach {
+                        requestEndpoint = DummyRequestEndpoint.test
+                        HTTPRequestStubber.stub(requestEndpoint, data: DummyJSONAPIDTO.json.data)
+                    }
+
+                    it("it return list of DummyJSONAPIDTO") {
+                        waitUntil(timeout: .seconds(5)) { done in
+                            sut.performRequest(
+                                requestEndpoint,
+                                for: DummyJSONAPIDTO.self
+                            )
+                            .sink { response in
+                                switch response {
+                                case .success(let success):
+                                    expect(success.data.title).toNot(beNil())
+                                    expect(success.data.description).toNot(beNil())
+                                    expect(success.data.coverImageUrl).toNot(beNil())
+                                    expect(success.data.surveyType).toNot(beNil())
+                                    expect(success.data.createdAt).toNot(beNil())
+                                    expect(success.data.activeAt).toNot(beNil())
+
+                                case .failure:
+                                    fail("Request should success")
+                                }
+
+                                done()
+                            }
+                            .store(in: &cancellables)
+                        }
+                    }
+                }
+
+                context("when network return empty json") {
+                    beforeEach {
+                        requestEndpoint = DummyRequestEndpoint.test
+                        HTTPRequestStubber.stub(requestEndpoint, data: "{}".data)
+                    }
+
+                    context("when we fetch list of DummyJSONAPIDTO") {
+                        it("it return empty list of DummyJSONAPIDTO") {
+                            waitUntil(timeout: .seconds(5)) { done in
+                                sut.performRequest(
+                                    requestEndpoint,
+                                    for: [DummyJSONAPIDTO].self
+                                )
+                                .sink { response in
+                                    switch response {
+                                    case .success(let success):
+                                        expect(success.data).to(beEmpty())
+
+                                    case .failure:
+                                        fail("Request should success")
+                                    }
+
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                            }
+                        }
+                    }
+
+                    context("when we fetch single object of DummyJSONAPIDTO") {
+                        it("it return error") {
+                            waitUntil(timeout: .seconds(5)) { done in
+                                sut.performRequest(
+                                    requestEndpoint,
+                                    for: DummyJSONAPIDTO.self
+                                )
+                                .sink { response in
+                                    switch response {
+                                    case .success:
+                                        fail("Request should success")
+
+                                    case .failure(let error):
+                                        print(error)
+                                    }
+
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                            }
+                        }
+                    }
+                }
+
+                context("when network return empty string") {
+                    beforeEach {
+                        requestEndpoint = DummyRequestEndpoint.test
+                        HTTPRequestStubber.stub(requestEndpoint, data: "".data)
+                    }
+
+                    context("when we fetch list of DummyJSONAPIDTO") {
+                        it("it return error") {
+                            waitUntil(timeout: .seconds(5)) { done in
+                                sut.performRequest(
+                                    requestEndpoint,
+                                    for: [DummyJSONAPIDTO].self
+                                )
+                                .sink { response in
+                                    switch response {
+                                    case .success:
+                                        fail("Request should fail")
+
+                                    case .failure:
+                                        break
+                                    }
+
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                            }
+                        }
+                    }
+
+                    context("when we fetch single object of DummyJSONAPIDTO") {
+                        it("it return error") {
+                            waitUntil(timeout: .seconds(5)) { done in
+                                sut.performRequest(
+                                    requestEndpoint,
+                                    for: DummyJSONAPIDTO.self
+                                )
+                                .sink { response in
+                                    switch response {
+                                    case .success:
+                                        fail("Request should fail")
+
+                                    case .failure:
+                                        break
+                                    }
+
+                                    done()
+                                }
+                                .store(in: &cancellables)
+                            }
+                        }
+                    }
+                }
+
                 context("when network return error") {
                     beforeEach {
                         requestEndpoint = DummyRequestEndpoint.test
@@ -79,10 +218,10 @@ final class NetworkJSONAPIClientSpec: QuickSpec {
                             )
                             .sink { response in
                                 switch response {
-                                case .success(let success):
+                                case .success:
                                     fail("Request shoould fail")
 
-                                case .failure(let failure):
+                                case .failure:
                                     break
                                 }
 
