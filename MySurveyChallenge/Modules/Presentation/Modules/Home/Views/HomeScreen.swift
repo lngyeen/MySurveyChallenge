@@ -65,6 +65,7 @@ struct HomeScreen: View {
         .contentShape(Circle())
         .padding(.top, 35)
         .padding(.trailing, 20)
+        .accessibilityLabel(Text("Log out"))
     }
 
     private func logout() {

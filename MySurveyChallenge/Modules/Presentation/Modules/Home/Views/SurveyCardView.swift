@@ -28,6 +28,8 @@ struct SurveyCardView: View {
         .padding(.bottom, 26)
         .background(backgroundView)
         .background(Color(R.color.colorDefaultBackgroundDark))
+        .accessibilityElement()
+        .accessibilityLabel(Text("SurveyCardView"))
     }
 
     private var surveyInfoView: some View {

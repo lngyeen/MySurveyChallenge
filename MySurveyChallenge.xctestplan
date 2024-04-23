@@ -24,11 +24,17 @@
       }
     },
     {
-      "enabled" : false,
       "target" : {
         "containerPath" : "container:MySurveyChallenge.xcodeproj",
         "identifier" : "F87F196F2BCB559E003A2CA6",
         "name" : "MySurveyChallengeUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MySurveyChallenge.xcodeproj",
+        "identifier" : "F846F3E02BD77597003EE306",
+        "name" : "MySurveyChallengeKIFUITests"
       }
     }
   ],

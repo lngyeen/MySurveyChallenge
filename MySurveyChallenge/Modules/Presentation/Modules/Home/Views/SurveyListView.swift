@@ -28,6 +28,7 @@ struct SurveyListView: View {
 
             navigationLink
         }
+        .accessibilityLabel(Text(typeName))
     }
 
     private var surveysPageView: some View {
@@ -44,6 +45,7 @@ struct SurveyListView: View {
                   })
                 .onPageChanged(onPageChanged)
                 .ignoresSafeArea()
+                .accessibilityLabel(Text("Pager"))
         }
     }
 
