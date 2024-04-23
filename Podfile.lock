@@ -16,6 +16,11 @@ PODS:
     - Japx/Core
   - Japx/Core (4.0.0)
   - KeychainAccess (4.2.2)
+  - KIF (3.8.9):
+    - KIF/Core (= 3.8.9)
+  - KIF/Core (3.8.9)
+  - KIF/IdentifierTests (3.8.9):
+    - KIF/Core
   - Nimble (13.2.1):
     - CwlPreconditionTesting (~> 2.2.0)
   - OHHTTPStubs/Core (9.1.0)
@@ -45,6 +50,8 @@ DEPENDENCIES:
   - Japx
   - Japx/Alamofire
   - KeychainAccess
+  - KIF
+  - KIF/IdentifierTests
   - Nimble
   - OHHTTPStubs/Swift
   - Quick
@@ -64,6 +71,7 @@ SPEC REPOS:
     - CwlPreconditionTesting
     - Japx
     - KeychainAccess
+    - KIF
     - Nimble
     - OHHTTPStubs
     - Quick
@@ -82,6 +90,7 @@ SPEC CHECKSUMS:
   CwlPreconditionTesting: ccfd08aca58d14e04062b2a3dd2fd52e09857453
   Japx: 4bb2d79d023af5e7ea44c0a2875c4b070080e111
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  KIF: 7660c626b0f2d4562533590960db70a36d640558
   Nimble: 9e81a67096dab1d1f5160d7a3f8fa7a1eeec38fd
   OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   Quick: 2b651168441479b949ba987f3cee41a9cc53aa32
@@ -91,6 +100,6 @@ SPEC CHECKSUMS:
   Swinject: 6ba81f58fd769c9fd4b8ceced9e25a9cb137cb3c
   xcbeautify: 6e2f57af5c3a86d490376d5758030a8dcc201c1b
 
-PODFILE CHECKSUM: 67efda0b736f5921180b8057530b91231ef06a3a
+PODFILE CHECKSUM: d7cc359c7b2c63a22e3597730cb88bf2ebeb64d2
 
 COCOAPODS: 1.15.2

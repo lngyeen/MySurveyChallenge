@@ -28,6 +28,12 @@ target 'MySurveyChallenge' do
     testing_pods
   end
 
+  target 'MySurveyChallengeKIFUITests' do
+    testing_pods
+    pod 'KIF', :configurations => ['Dev-Debug', 'Prod-Debug']
+    pod 'KIF/IdentifierTests', :configurations => ['Dev-Debug', 'Prod-Debug']
+  end
+
   target 'MySurveyChallengeUITests' do
     # Pods for testing
     testing_pods

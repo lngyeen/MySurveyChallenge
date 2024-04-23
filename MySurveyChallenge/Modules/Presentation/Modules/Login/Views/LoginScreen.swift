@@ -74,6 +74,7 @@ struct LoginScreen: View {
         .onAppear {
             checkAuthenticationStatus()
         }
+        .accessibilityLabel(Text(typeName))
     }
 
     private func checkAuthenticationStatus() {
@@ -155,6 +156,7 @@ struct LoginScreen: View {
             .onTapGesture {
                 focusedField = .email
             }
+            .accessibilityLabel(Text("Email"))
     }
 
     private var passwordField: some View {
@@ -172,6 +174,7 @@ struct LoginScreen: View {
                 .onTapGesture {
                     focusedField = .password
                 }
+                .accessibilityLabel(Text("Password"))
         }
         .overlay(alignment: .trailing) {
             forgotPasswordButton

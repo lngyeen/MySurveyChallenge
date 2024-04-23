@@ -23,7 +23,9 @@ public protocol KeychainFrameworkAdapter {
 
 public class KeychainFrameworkAdapterImpl: KeychainFrameworkAdapter {
     enum Constanst {
-        static let mainKeychainIdentifier = "Bundle.main.bundleIdentifier"
+        static var mainKeychainIdentifier: String {
+            return PlatformUtils.isUITesting ? "Bundle.main.bundleIdentifierUITest" : "Bundle.main.bundleIdentifier"
+        }
     }
 
     private let keychain = Keychain(service: Constanst.mainKeychainIdentifier)
